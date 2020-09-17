@@ -56,14 +56,16 @@ on_actions = {
 									has_global_flag = bettercitynews_liberation_of_dublin
 								}
 							}
-							event_target:bettercitynews_fall_of_dublin_controller = {
+							FROM = {
+								tag = event_target:bettercitynews_fall_of_dublin_controller
 								NOT = {
 									controls_state = 113
 									owns_state = 113
 									tag = event_target:bettercitynews_fall_of_dublin_owner
 								}
 							}
-							event_target:bettercitynews_fall_of_dublin_owner = {
+							ROOT = {
+								tag = event_target:bettercitynews_fall_of_dublin_owner
 								controls_state = 113
 								owns_state = 113
 								NOT = {
