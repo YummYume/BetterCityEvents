@@ -34,13 +34,13 @@ news_event = {
 			limit = {
 				controls_state = 113
 			}
-			save_event_target_as = bettercitynews_fall_of_dublin_controller
+			save_global_event_target_as = bettercitynews_fall_of_dublin_controller
 		}
 		every_country = {
 			limit = {
 				owns_state = 113
 			}
-			save_event_target_as = bettercitynews_fall_of_dublin_owner
+			save_global_event_target_as = bettercitynews_fall_of_dublin_owner
 		}
 	}
 	

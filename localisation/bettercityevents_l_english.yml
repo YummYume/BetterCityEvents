@@ -5,7 +5,7 @@
  bettercitynews.1.b:0 "Damn..."
  bettercitynews.1.c:0 "Impressive."
  bettercitynews.2.t:0 "The Liberation of Dublin"
- bettercitynews.2.d:0 "Dublin has been liberated by [?bettercitynews_fall_of_dublin_owner.GetAdjective] forces, driving the [bettercitynews_fall_of_dublin_controller.GetAdjective] troops out of the city."
+ bettercitynews.2.d:0 "Dublin has been liberated by [bettercitynews_fall_of_dublin_owner.GetAdjective] forces, driving the [bettercitynews_fall_of_dublin_controller.GetAdjective] troops out of the city."
  bettercitynews.2.a:0 "Damn..."
  bettercitynews.2.b:0 "[113.GetName] is liberated!"
  bettercitynews.2.c:0 "Impressive."
