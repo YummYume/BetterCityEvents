@@ -1,8 +1,8 @@
-#spriteTypes = {
+spriteTypes = {
 	
 #	spriteType = {
 #		name = ""
 #		texturefile = "gfx/event_pictures/.dds"
 #	}
 
-#}
+}
