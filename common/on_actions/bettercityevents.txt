@@ -3,36 +3,80 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					FROM.FROM = {
-						state = 113
-					}
-					FROM = {
-						has_war_with = ROOT
-						owns_state = 113
-						NOT = {
-							controls_state = 113
-						}
-					}
-					ROOT = {
-						has_war_with = FROM
-						controls_state = 113
-						NOT = {
-							owns_state = 113
-						}
-					}
-					NOT = {
-						any_country = {
-							has_global_flag = bettercitynews_fall_of_dublin
+					FROM.FROM = { #Add all the states concerned by events here
+						OR = {
+							state = 113
 						}
 					}
 				}
-				set_global_flag = bettercitynews_fall_of_dublin
-				FROM = {
-					save_global_event_target_as = bettercitynews_fall_of_dublin_owner
-				}
-				ROOT = {
-					save_global_event_target_as = bettercitynews_fall_of_dublin_controller
-					news_event = { id = bettercitynews.1 hours = 5 }
+				if = { #Dublin
+					limit = {
+						FROM.FROM = {
+							state = 113
+						}
+					}
+					if = { #Captured
+						limit = {
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_fall_of_dublin
+								}
+							}
+							FROM = {
+								has_war_with = ROOT
+								owns_state = 113
+								NOT = {
+									controls_state = 113
+								}
+							}
+							ROOT = {
+								has_war_with = FROM
+								controls_state = 113
+								NOT = {
+									owns_state = 113
+								}
+							}
+						}
+						FROM = {
+							save_global_event_target_as = bettercitynews_fall_of_dublin_owner
+							set_global_flag = bettercitynews_fall_of_dublin
+						}
+						ROOT = {
+							save_global_event_target_as = bettercitynews_fall_of_dublin_controller
+							news_event = { id = bettercitynews.1 hours = 5 }
+						}
+					}
+					else_if = { #Liberated
+						limit = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_dublin
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_liberation_of_dublin
+								}
+							}
+							event_target:bettercitynews_fall_of_dublin_controller = {
+								NOT = {
+									controls_state = 113
+									owns_state = 113
+									tag = event_target:bettercitynews_fall_of_dublin_owner
+								}
+							}
+							event_target:bettercitynews_fall_of_dublin_owner = {
+								controls_state = 113
+								owns_state = 113
+								NOT = {
+									tag = event_target:bettercitynews_fall_of_dublin_controller
+								}
+							}
+						}
+						ROOT = {
+							clr_global_flag = bettercitynews_fall_of_dublin
+							set_global_flag = bettercitynews_liberation_of_dublin
+							news_event = { id = bettercitynews.2 hours = 5 }
+						}
+					}
 				}
 			}
 		}
