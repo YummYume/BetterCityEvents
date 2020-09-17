@@ -1,0 +1,140 @@
+###########################
+# Better City News Mod
+###########################
+
+add_namespace = bettercitynews
+
+# The Fall of Dublin (test event)
+news_event = {
+	id = bettercitynews.1
+	title = bettercitynews.1.t
+	desc = bettercitynews.1.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+        113 = {
+            OWNER = {
+                NOT = {
+                    controls_state = 113
+                }
+            }
+        }
+		NOT = {
+            any_country = {
+                has_global_flag = bettercitynews_fall_of_dublin
+            }
+        }
+	}
+	
+	immediate = {
+		set_global_flag = bettercitynews_fall_of_dublin
+		every_country = {
+			limit = {
+				controls_state = 113
+			}
+			save_event_target_as = bettercitynews_fall_of_dublin_controller
+		}
+		every_country = {
+			limit = {
+				owns_state = 113
+			}
+			save_event_target_as = bettercitynews_fall_of_dublin_owner
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = bettercitynews.1.a
+		trigger = {
+			controls_state = 113
+            NOT = {
+                owns_state = 113
+            }
+		}
+	}
+	option = {
+		name = bettercitynews.1.b
+		trigger = {
+            owns_state = 113
+            NOT = {
+                controls_state = 113
+            }
+        }
+	}
+	option = {
+		name = bettercitynews.1.c
+		trigger = {
+            NOT = {
+                controls_state = 113
+                owns_state = 113
+            }
+        }
+	}
+}
+
+# The Liberation of Dublin (test event)
+news_event = {
+	id = bettercitynews.2
+	title = bettercitynews.2.t
+	desc = bettercitynews.2.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	trigger = {
+		any_country = {
+			has_global_flag = bettercitynews_fall_of_dublin
+		}
+        event_target:bettercitynews_fall_of_dublin_controller = {
+            NOT = {
+                controls_state = 113
+				owns_state = 113
+            }
+        }
+		event_target:bettercitynews_fall_of_dublin_owner = {
+			controls_state = 113
+			owns_state = 113
+		}
+	}
+	
+	immediate = {
+		set_global_flag = bettercitynews_liberation_of_dublin
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = bettercitynews.2.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_dublin_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_dublin_owner
+            }
+		}
+	}
+	option = {
+		name = bettercitynews.2.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_dublin_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_dublin_controller
+            }
+        }
+	}
+	option = {
+		name = bettercitynews.2.c
+		trigger = {
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_dublin_owner
+				tag = event_target:bettercitynews_fall_of_dublin_controller
+            }
+        }
+	}
+}
