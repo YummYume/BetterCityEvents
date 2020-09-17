@@ -1,6 +1,6 @@
 ﻿l_english:
  bettercitynews.1.t:0 "The Fall of Dublin"
- bettercitynews.1.d:0 "Dublin has fallen to [113.CONTROLLER.GetAdjective] forces."
+ bettercitynews.1.d:0 "Dublin has fallen to [bettercitynews_fall_of_dublin_controller.GetAdjective] forces."
  bettercitynews.1.a:0 "[113.GetName] is ours!"
  bettercitynews.1.b:0 "Damn..."
  bettercitynews.1.c:0 "Impressive."

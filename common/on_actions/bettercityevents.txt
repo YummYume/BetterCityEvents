@@ -1,0 +1,40 @@
+on_actions = {
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM.FROM = {
+						state = 113
+					}
+					FROM = {
+						has_war_with = ROOT
+						owns_state = 113
+						NOT = {
+							controls_state = 113
+						}
+					}
+					ROOT = {
+						has_war_with = FROM
+						controls_state = 113
+						NOT = {
+							owns_state = 113
+						}
+					}
+					NOT = {
+						any_country = {
+							has_global_flag = bettercitynews_fall_of_dublin
+						}
+					}
+				}
+				set_global_flag = bettercitynews_fall_of_dublin
+				FROM = {
+					save_global_event_target_as = bettercitynews_fall_of_dublin_owner
+				}
+				ROOT = {
+					save_global_event_target_as = bettercitynews_fall_of_dublin_controller
+					news_event = { id = bettercitynews.1 hours = 5 }
+				}
+			}
+		}
+	}
+}
