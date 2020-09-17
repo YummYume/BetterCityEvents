@@ -4,7 +4,7 @@
 
 add_namespace = bettercitynews
 
-# The Fall of Dublin (test event)
+# The Fall of Dublin
 news_event = {
 	id = bettercitynews.1
 	title = bettercitynews.1.t
@@ -18,18 +18,18 @@ news_event = {
 	option = {
 		name = bettercitynews.1.a
 		trigger = {
-			controls_state = 113
+			tag = event_target:bettercitynews_fall_of_dublin_owner
             NOT = {
-                owns_state = 113
+                tag = event_target:bettercitynews_fall_of_dublin_controller
             }
 		}
 	}
 	option = {
 		name = bettercitynews.1.b
 		trigger = {
-            owns_state = 113
+            tag = event_target:bettercitynews_fall_of_dublin_controller
             NOT = {
-                controls_state = 113
+                tag = event_target:bettercitynews_fall_of_dublin_owner
             }
         }
 	}
@@ -37,14 +37,14 @@ news_event = {
 		name = bettercitynews.1.c
 		trigger = {
             NOT = {
-                controls_state = 113
-                owns_state = 113
+                tag = event_target:bettercitynews_fall_of_dublin_owner
+				tag = event_target:bettercitynews_fall_of_dublin_controller
             }
         }
 	}
 }
 
-# The Liberation of Dublin (test event)
+# The Liberation of Dublin
 news_event = {
 	id = bettercitynews.2
 	title = bettercitynews.2.t
