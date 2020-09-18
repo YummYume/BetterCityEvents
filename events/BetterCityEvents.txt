@@ -446,3 +446,123 @@ news_event = {
         }
 	}
 }
+
+# The Conquest of Flanders
+news_event = {
+	id = bettercitynews.10
+	title = bettercitynews.10.t
+	desc = bettercitynews.10.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.10.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_flanders_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_flanders_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.10.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_flanders_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_flanders_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.10.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_flanders_owner
+				tag = event_target:bettercitynews_fall_of_flanders_controller
+            }
+        }
+	}
+}
+
+# The Fall of Amsterdam
+news_event = {
+	id = bettercitynews.11
+	title = bettercitynews.11.t
+	desc = bettercitynews.11.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.11.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_amsterdam_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_amsterdam_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.11.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_amsterdam_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_amsterdam_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.11.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_amsterdam_owner
+				tag = event_target:bettercitynews_fall_of_amsterdam_controller
+            }
+        }
+	}
+}
+
+# The Liberation of Amsterdam
+news_event = {
+	id = bettercitynews.12
+	title = bettercitynews.12.t
+	desc = bettercitynews.12.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+		name = bettercitynews.12.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_amsterdam_controller
+           	NOT = {
+                tag = event_target:bettercitynews_fall_of_amsterdam_owner
+            }
+		}
+	}
+	option = { #NATION WHO OWNS THE STATE (OWNED THE STATE WHEN FALL EVENT HAPPENED)
+		name = bettercitynews.12.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_amsterdam_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_amsterdam_controller
+            }
+        }
+	}
+	option = { #NOT OWNER NOR OLD CONTROLLER
+		name = bettercitynews.12.c
+		trigger = {
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_amsterdam_owner
+				tag = event_target:bettercitynews_fall_of_amsterdam_controller
+            }
+        }
+	}
+}

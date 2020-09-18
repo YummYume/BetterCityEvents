@@ -10,6 +10,7 @@ on_actions = {
 							state = 112 #Lisbon
 							state = 3 #Berne
 							state = 8 #Luxemburg
+							state = 7 #Amsterdam
 						}
 					}
 				}
@@ -24,6 +25,7 @@ on_actions = {
 							NOT = {
 								any_country = {
 									has_global_flag = bettercitynews_fall_of_dublin
+									has_global_flag = bettercitynews_liberation_of_dublin
 								}
 							}
 							FROM = {
@@ -97,6 +99,7 @@ on_actions = {
 							NOT = {
 								any_country = {
 									has_global_flag = bettercitynews_fall_of_lisbon
+									has_global_flag = bettercitynews_liberation_of_lisbon
 								}
 							}
 							FROM = {
@@ -170,6 +173,7 @@ on_actions = {
 							NOT = {
 								any_country = {
 									has_global_flag = bettercitynews_fall_of_berne
+									has_global_flag = bettercitynews_liberation_of_berne
 								}
 							}
 							FROM = {
@@ -243,6 +247,7 @@ on_actions = {
 							NOT = {
 								any_country = {
 									has_global_flag = bettercitynews_fall_of_luxemburg
+									has_global_flag = bettercitynews_liberation_of_luxemburg
 								}
 							}
 							FROM = {
@@ -305,6 +310,80 @@ on_actions = {
 					}
 				}
 
+				else_if = { #Amsterdam
+					limit = {
+						FROM.FROM = {
+							state = 7
+						}
+					}
+					if = { #Captured
+						limit = {
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_fall_of_amsterdam
+									has_global_flag = bettercitynews_liberation_of_amsterdam
+								}
+							}
+							FROM = {
+								has_war_with = ROOT
+								owns_state = 7
+								NOT = {
+									controls_state = 7
+									has_capitulated = yes
+								}
+							}
+							ROOT = {
+								has_war_with = FROM
+								controls_state = 7
+								NOT = {
+									owns_state = 7
+								}
+							}
+						}
+						FROM = {
+							save_global_event_target_as = bettercitynews_fall_of_amsterdam_owner
+							set_global_flag = bettercitynews_fall_of_amsterdam
+						}
+						ROOT = {
+							save_global_event_target_as = bettercitynews_fall_of_amsterdam_controller
+							news_event = { id = bettercitynews.11 hours = 5 }
+						}
+					}
+					else_if = { #Liberated
+						limit = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_amsterdam
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_liberation_of_amsterdam
+								}
+							}
+							FROM = {
+								tag = event_target:bettercitynews_fall_of_lamsterdam_controller
+								NOT = {
+									controls_state = 7
+									owns_state = 7
+									tag = event_target:bettercitynews_fall_of_amsterdam_owner
+								}
+							}
+							ROOT = {
+								tag = event_target:bettercitynews_fall_of_amsterdam_owner
+								controls_state = 7
+								owns_state = 7
+								NOT = {
+									tag = event_target:bettercitynews_fall_of_amsterdam_controller
+								}
+							}
+						}
+						ROOT = {
+							clr_global_flag = bettercitynews_fall_of_lamsterdam
+							set_global_flag = bettercitynews_liberation_of_amsterdam
+							news_event = { id = bettercitynews.12 hours = 5 }
+						}
+					}
+				}
+
 			}
 		}
 	}
@@ -319,6 +398,7 @@ on_actions = {
 					FROM.FROM = { #Add all the states concerned by events here (NON-CAPITALS)
 						OR = {
 							state = 151 #Zürich
+							state = 6 #Flanders
 						}
 					}
 				}
@@ -355,6 +435,42 @@ on_actions = {
 					ROOT = {
 						save_global_event_target_as = bettercitynews_fall_of_zurich_controller
 						news_event = { id = bettercitynews.7 hours = 5 }
+					}
+				}
+
+				if = { #Flanders
+					limit = {
+						FROM.FROM = {
+							state = 6
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_flanders
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 6
+							NOT = {
+								controls_state = 6
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 6
+							NOT = {
+								owns_state = 6
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_flanders_owner
+						set_global_flag = bettercitynews_fall_of_flanders
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_flanders_controller
+						news_event = { id = bettercitynews.10 hours = 5 }
 					}
 				}
 			}
