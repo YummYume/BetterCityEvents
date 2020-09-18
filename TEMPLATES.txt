@@ -1,0 +1,81 @@
+Event templates (copy paste and fill blanks) :
+
+# The Fall of ...
+news_event = {
+	id = bettercitynews.
+	title = bettercitynews..t
+	desc = bettercitynews..d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews..a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of__owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of__controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews..b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of__controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of__owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews..c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of__owner
+				tag = event_target:bettercitynews_fall_of__controller
+            }
+        }
+	}
+}
+
+# The Liberation of ...
+news_event = {
+	id = bettercitynews.
+	title = bettercitynews..t
+	desc = bettercitynews..d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+		name = bettercitynews..a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of__controller
+           	NOT = {
+                tag = event_target:bettercitynews_fall_of__owner
+            }
+		}
+	}
+	option = { #NATION WHO OWNS THE STATE (OWNED THE STATE WHEN FALL EVENT HAPPENED)
+		name = bettercitynews..b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of__owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of__controller
+            }
+        }
+	}
+	option = { #NOT OWNER NOR OLD CONTROLLER
+		name = bettercitynews..c
+		trigger = {
+            NOT = {
+                tag = event_target:bettercitynews_fall_of__owner
+				tag = event_target:bettercitynews_fall_of__controller
+            }
+        }
+	}
+}

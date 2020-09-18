@@ -1,5 +1,88 @@
 ###########################
 # Better City News Mod
+
+# TEMPLATES :
+
+# The Fall of ...
+#news_event = {
+#	id = bettercitynews.
+#	title = bettercitynews..t
+#	desc = bettercitynews..d
+#	picture = GFX_bettercityevents_
+#	
+#	major = yes
+#	
+#	is_triggered_only = yes
+#	
+#	option = { CURRENT OWNER
+#		name = bettercitynews..a
+#		trigger = {
+#			 tag = event_target:bettercitynews_fall_of__owner
+#            NOT = {
+#                tag = event_target:bettercitynews_fall_of__controller
+#            }
+#		}
+#	}
+#	option = { CURRENT CONTROLLER
+#		name = bettercitynews..b
+#		trigger = {
+#            tag = event_target:bettercitynews_fall_of__controller
+#            NOT = {
+#                tag = event_target:bettercitynews_fall_of__owner
+#            }
+#        }
+#	}
+#	option = { NOT OWNER NOR CONTROLLER
+#		name = bettercitynews..c
+#		trigger = {
+#            NOT = {
+#               tag = event_target:bettercitynews_fall_of__owner
+#				tag = event_target:bettercitynews_fall_of__controller
+#            }
+#        }
+#	}
+#}
+
+# The Liberation of ... (ONLY FOR CAPITALS)
+#news_event = {
+#	id = bettercitynews.
+#	title = bettercitynews..t
+#	desc = bettercitynews..d
+#	picture = GFX_bettercityevents_
+#	
+#	major = yes
+#
+#	is_triggered_only = yes
+#	
+#	option = { NATION WHO OCCUPIER (CONTROLLED) THE STATE
+#		name = bettercitynews..a
+#		trigger = {
+#			tag = event_target:bettercitynews_fall_of__controller
+#           NOT = {
+#                tag = event_target:bettercitynews_fall_of__owner
+#            }
+#		}
+#	}
+#	option = { NATION WHO OWNS THE STATE (OWNED THE STATE WHEN FALL EVENT HAPPENED)
+#		name = bettercitynews..b
+#		trigger = {
+#            tag = event_target:bettercitynews_fall_of__owner
+#            NOT = {
+#                tag = event_target:bettercitynews_fall_of__controller
+#            }
+#        }
+#	}
+#	option = { NOT OWNER NOR OLD CONTROLLER
+#		name = bettercitynews..c
+#		trigger = {
+#            NOT = {
+#                tag = event_target:bettercitynews_fall_of__owner
+#				 tag = event_target:bettercitynews_fall_of__controller
+#            }
+#        }
+#	}
+#}
+
 ###########################
 
 add_namespace = bettercitynews
@@ -79,6 +162,286 @@ news_event = {
             NOT = {
                 tag = event_target:bettercitynews_fall_of_dublin_owner
 				tag = event_target:bettercitynews_fall_of_dublin_controller
+            }
+        }
+	}
+}
+
+# The Fall of Lisbon
+news_event = {
+	id = bettercitynews.3
+	title = bettercitynews.3.t
+	desc = bettercitynews.3.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bettercitynews.3.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_lisbon_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_lisbon_controller
+            }
+		}
+	}
+	option = {
+		name = bettercitynews.3.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_lisbon_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_lisbon_owner
+            }
+        }
+	}
+	option = {
+		name = bettercitynews.3.c
+		trigger = {
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_lisbon_owner
+				tag = event_target:bettercitynews_fall_of_lisbon_controller
+            }
+        }
+	}
+}
+
+# The Liberation of Lisbon
+news_event = {
+	id = bettercitynews.4
+	title = bettercitynews.4.t
+	desc = bettercitynews.4.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bettercitynews.4.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_lisbon_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_lisbon_owner
+            }
+		}
+	}
+	option = {
+		name = bettercitynews.4.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_lisbon_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_lisbon_controller
+            }
+        }
+	}
+	option = {
+		name = bettercitynews.4.c
+		trigger = {
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_lisbon_owner
+				tag = event_target:bettercitynews_fall_of_lisbon_controller
+            }
+        }
+	}
+}
+
+# The Fall of Berne
+news_event = {
+	id = bettercitynews.5
+	title = bettercitynews.5.t
+	desc = bettercitynews.5.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bettercitynews.5.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_berne_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_berne_controller
+            }
+		}
+	}
+	option = {
+		name = bettercitynews.5.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_berne_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_berne_owner
+            }
+        }
+	}
+	option = {
+		name = bettercitynews.5.c
+		trigger = {
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_berne_owner
+				tag = event_target:bettercitynews_fall_of_berne_controller
+            }
+        }
+	}
+}
+
+# The Liberation of Berne
+news_event = {
+	id = bettercitynews.6
+	title = bettercitynews.6.t
+	desc = bettercitynews.6.d
+	picture = GFX_news_event_germany_victory
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = bettercitynews.6.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_berne_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_berne_owner
+            }
+		}
+	}
+	option = {
+		name = bettercitynews.6.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_berne_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_berne_controller
+            }
+        }
+	}
+	option = {
+		name = bettercitynews.6.c
+		trigger = {
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_berne_owner
+				tag = event_target:bettercitynews_fall_of_berne_controller
+            }
+        }
+	}
+}
+
+# The Fall of Zürich
+news_event = {
+	id = bettercitynews.7
+	title = bettercitynews.7.t
+	desc = bettercitynews.7.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.7.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_zurich_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_zurich_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.7.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_zurich_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_zurich_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.7.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_zurich_owner
+				tag = event_target:bettercitynews_fall_of_zurich_controller
+            }
+        }
+	}
+}
+
+# The Fall of Luxemburg
+news_event = {
+	id = bettercitynews.8
+	title = bettercitynews.8.t
+	desc = bettercitynews.8.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.8.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_luxemburg_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_luxemburg_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.8.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_luxemburg_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_luxemburg_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.8.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_luxemburg_owner
+				tag = event_target:bettercitynews_fall_of_luxemburg_controller
+            }
+        }
+	}
+}
+
+# The Liberation of Luxemburg
+news_event = {
+	id = bettercitynews.9
+	title = bettercitynews.9.t
+	desc = bettercitynews.9.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+		name = bettercitynews.9.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_luxemburg_controller
+           	NOT = {
+                tag = event_target:bettercitynews_fall_of_luxemburg_owner
+            }
+		}
+	}
+	option = { #NATION WHO OWNS THE STATE (OWNED THE STATE WHEN FALL EVENT HAPPENED)
+		name = bettercitynews.9.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_luxemburg_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_luxemburg_controller
+            }
+        }
+	}
+	option = { #NOT OWNER NOR OLD CONTROLLER
+		name = bettercitynews.9.c
+		trigger = {
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_luxemburg_owner
+				tag = event_target:bettercitynews_fall_of_luxemburg_controller
             }
         }
 	}
