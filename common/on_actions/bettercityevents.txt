@@ -913,6 +913,301 @@ on_actions = {
 					}
 				}
 
+				if = { #Copenhagen
+					limit = {
+						FROM.FROM = {
+							state = 37
+						}
+					}
+					if = { #Captured
+						limit = {
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_fall_of_copenhagen
+									has_global_flag = bettercitynews_liberation_of_copenhagen
+								}
+							}
+							FROM = {
+								has_war_with = ROOT
+								owns_state = 37
+								NOT = {
+									controls_state = 37
+									has_capitulated = yes
+								}
+							}
+							ROOT = {
+								has_war_with = FROM
+								controls_state = 37
+								NOT = {
+									owns_state = 37
+								}
+							}
+						}
+						FROM = {
+							save_global_event_target_as = bettercitynews_fall_of_copenhagen_owner
+							set_global_flag = bettercitynews_fall_of_copenhagen
+						}
+						ROOT = {
+							save_global_event_target_as = bettercitynews_fall_of_copenhagen_controller
+							news_event = { id = bettercitynews.30 hours = 5 }
+						}
+					}
+					else_if = { #Liberated
+						limit = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_copenhagen
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_liberation_of_copenhagen
+								}
+							}
+							FROM = {
+								tag = event_target:bettercitynews_fall_of_copenhagen_controller
+								NOT = {
+									controls_state = 37
+									owns_state = 37
+									tag = event_target:bettercitynews_fall_of_copenhagen_owner
+								}
+							}
+							ROOT = {
+								tag = event_target:bettercitynews_fall_of_copenhagen_owner
+								controls_state = 37
+								owns_state = 37
+								NOT = {
+									tag = event_target:bettercitynews_fall_of_copenhagen_controller
+								}
+							}
+						}
+						ROOT = {
+							clr_global_flag = bettercitynews_fall_of_copenhagen
+							set_global_flag = bettercitynews_liberation_of_copenhagen
+							news_event = { id = bettercitynews.31 hours = 5 }
+						}
+					}
+				}
+
+				if = { #Stockholm
+					limit = {
+						FROM.FROM = {
+							state = 141
+						}
+					}
+					if = { #Captured
+						limit = {
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_fall_of_stockholm
+									has_global_flag = bettercitynews_liberation_of_stockholm
+								}
+							}
+							FROM = {
+								has_war_with = ROOT
+								owns_state = 141
+								NOT = {
+									controls_state = 141
+									has_capitulated = yes
+								}
+							}
+							ROOT = {
+								has_war_with = FROM
+								controls_state = 141
+								NOT = {
+									owns_state = 141
+								}
+							}
+						}
+						FROM = {
+							save_global_event_target_as = bettercitynews_fall_of_stockholm_owner
+							set_global_flag = bettercitynews_fall_of_stockholm
+						}
+						ROOT = {
+							save_global_event_target_as = bettercitynews_fall_of_stockholm_controller
+							news_event = { id = bettercitynews.32 hours = 5 }
+						}
+					}
+					else_if = { #Liberated
+						limit = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_stockholm
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_liberation_of_stockholm
+								}
+							}
+							FROM = {
+								tag = event_target:bettercitynews_fall_of_stockholm_controller
+								NOT = {
+									controls_state = 141
+									owns_state = 141
+									tag = event_target:bettercitynews_fall_of_stockholm_owner
+								}
+							}
+							ROOT = {
+								tag = event_target:bettercitynews_fall_of_stockholm_owner
+								controls_state = 141
+								owns_state = 141
+								NOT = {
+									tag = event_target:bettercitynews_fall_of_stockholm_controller
+								}
+							}
+						}
+						ROOT = {
+							clr_global_flag = bettercitynews_fall_of_stockholm
+							set_global_flag = bettercitynews_liberation_of_stockholm
+							news_event = { id = bettercitynews.33 hours = 5 }
+						}
+					}
+				}
+
+				if = { #Oslo
+					limit = {
+						FROM.FROM = {
+							state = 110
+						}
+					}
+					if = { #Captured
+						limit = {
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_fall_of_oslo
+									has_global_flag = bettercitynews_liberation_of_oslo
+								}
+							}
+							FROM = {
+								has_war_with = ROOT
+								owns_state = 110
+								NOT = {
+									controls_state = 110
+									has_capitulated = yes
+								}
+							}
+							ROOT = {
+								has_war_with = FROM
+								controls_state = 110
+								NOT = {
+									owns_state = 110
+								}
+							}
+						}
+						FROM = {
+							save_global_event_target_as = bettercitynews_fall_of_oslo_owner
+							set_global_flag = bettercitynews_fall_of_oslo
+						}
+						ROOT = {
+							save_global_event_target_as = bettercitynews_fall_of_oslo_controller
+							news_event = { id = bettercitynews.34 hours = 5 }
+						}
+					}
+					else_if = { #Liberated
+						limit = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_oslo
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_liberation_of_oslo
+								}
+							}
+							FROM = {
+								tag = event_target:bettercitynews_fall_of_oslo_controller
+								NOT = {
+									controls_state = 110
+									owns_state = 110
+									tag = event_target:bettercitynews_fall_of_oslo_owner
+								}
+							}
+							ROOT = {
+								tag = event_target:bettercitynews_fall_of_oslo_owner
+								controls_state = 110
+								owns_state = 110
+								NOT = {
+									tag = event_target:bettercitynews_fall_of_oslo_controller
+								}
+							}
+						}
+						ROOT = {
+							clr_global_flag = bettercitynews_fall_of_oslo
+							set_global_flag = bettercitynews_liberation_of_oslo
+							news_event = { id = bettercitynews.35 hours = 5 }
+						}
+					}
+				}
+
+				if = { #Helsinki
+					limit = {
+						FROM.FROM = {
+							state = 111
+						}
+					}
+					if = { #Captured
+						limit = {
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_fall_of_helsinki
+									has_global_flag = bettercitynews_liberation_of_helsinki
+								}
+							}
+							FROM = {
+								has_war_with = ROOT
+								owns_state = 111
+								NOT = {
+									controls_state = 111
+									has_capitulated = yes
+								}
+							}
+							ROOT = {
+								has_war_with = FROM
+								controls_state = 111
+								NOT = {
+									owns_state = 111
+								}
+							}
+						}
+						FROM = {
+							save_global_event_target_as = bettercitynews_fall_of_helsinki_owner
+							set_global_flag = bettercitynews_fall_of_helsinki
+						}
+						ROOT = {
+							save_global_event_target_as = bettercitynews_fall_of_helsinki_controller
+							news_event = { id = bettercitynews.36 hours = 5 }
+						}
+					}
+					else_if = { #Liberated
+						limit = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_helsinki
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_liberation_of_helsinki
+								}
+							}
+							FROM = {
+								tag = event_target:bettercitynews_fall_of_helsinki_controller
+								NOT = {
+									controls_state = 111
+									owns_state = 111
+									tag = event_target:bettercitynews_fall_of_helsinki_owner
+								}
+							}
+							ROOT = {
+								tag = event_target:bettercitynews_fall_of_helsinki_owner
+								controls_state = 111
+								owns_state = 111
+								NOT = {
+									tag = event_target:bettercitynews_fall_of_helsinki_controller
+								}
+							}
+						}
+						ROOT = {
+							clr_global_flag = bettercitynews_fall_of_helsinki
+							set_global_flag = bettercitynews_liberation_of_helsinki
+							news_event = { id = bettercitynews.37 hours = 5 }
+						}
+					}
+				}
 
 			}
 		}
