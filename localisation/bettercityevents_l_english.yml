@@ -1,9 +1,9 @@
 ﻿l_english:
  bettercitynews.1.t:0 "The Fall of Dublin"
- bettercitynews.1.d:0 "Dublin has fallen to [bettercitynews_fall_of_dublin_controller.GetAdjective] forces."
- bettercitynews.1.a:0 "[113.GetName] is ours!"
- bettercitynews.1.b:0 "Damn..."
- bettercitynews.1.c:0 "Impressive."
+ bettercitynews.1.d:0 "The largest city of the island of Ireland has fallen... Scene terrifyingly similiar to the English conquests of the city hundreds of years before has emerged, as the [bettercitynews_fall_of_dublin_controller.GetAdjective] flag flies above the Dublin Castle. Marches have been organised thourough the Croke Park, with mainly the infantry regiments passing along the tribune. The local militias are still desperetaly holding onto General Post Office, the capital of Easter Rising, with [bettercitynews_fall_of_dublin_controller.GetAdjective] bullet holes joining those made by English in 1922. With this exception, the city is completely in the enemy hands..."
+ bettercitynews.1.a:0 "Not again..."
+ bettercitynews.1.b:0 "The emerald island is now open to us!"
+ bettercitynews.1.c:0 "But what about the beer?"
  bettercitynews.2.t:0 "The Liberation of Dublin"
  bettercitynews.2.d:0 "Dublin has been liberated by [bettercitynews_fall_of_dublin_owner.GetAdjective] forces, driving the [bettercitynews_fall_of_dublin_controller.GetAdjective] troops out of the city."
  bettercitynews.2.a:0 "Damn..."
