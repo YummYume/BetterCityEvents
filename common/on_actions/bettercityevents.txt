@@ -18,6 +18,10 @@ on_actions = {
 							state = 47 #Athens
 							state = 107 #Belgrade
 							state = 9 #Prague
+							state = 37 #Copenhagen
+							state = 141 #Stockholm
+							state = 110 #Oslo
+							state = 111 #Helsinki
 						}
 					}
 				}

@@ -1246,3 +1246,323 @@ news_event = {
         }
 	}
 }
+
+# The Fall of Copenhagen
+news_event = {
+	id = bettercitynews.30
+	title = bettercitynews.30.t
+	desc = bettercitynews.30.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.30.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_copenhagen_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_copenhagen_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.30.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_copenhagen_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_copenhagen_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.30.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_copenhagen_owner
+				tag = event_target:bettercitynews_fall_of_copenhagen_controller
+            }
+        }
+	}
+}
+
+# The Liberation of Copenhagen
+news_event = {
+	id = bettercitynews.31
+	title = bettercitynews.31.t
+	desc = bettercitynews.31.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+		name = bettercitynews.31.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_copenhagen_controller
+           	NOT = {
+                tag = event_target:bettercitynews_fall_of_copenhagen_owner
+            }
+		}
+	}
+	option = { #NATION WHO OWNS THE STATE (OWNED THE STATE WHEN FALL EVENT HAPPENED)
+		name = bettercitynews.31.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_copenhagen_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_copenhagen_controller
+            }
+        }
+	}
+	option = { #NOT OWNER NOR OLD CONTROLLER
+		name = bettercitynews.31.c
+		trigger = {
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_copenhagen_owner
+				tag = event_target:bettercitynews_fall_of_copenhagen_controller
+            }
+        }
+	}
+}
+
+# The Fall of Stockholm
+news_event = {
+	id = bettercitynews.32
+	title = bettercitynews.32.t
+	desc = bettercitynews.32.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.32.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_stockholm_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_stockholm_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.32.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_stockholm_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_stockholm_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.32.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_stockholm_owner
+				tag = event_target:bettercitynews_fall_of_stockholm_controller
+            }
+        }
+	}
+}
+
+# The Liberation of Stockholm
+news_event = {
+	id = bettercitynews.33
+	title = bettercitynews.33.t
+	desc = bettercitynews.33.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+		name = bettercitynews.33.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_stockholm_controller
+           	NOT = {
+                tag = event_target:bettercitynews_fall_of_stockholm_owner
+            }
+		}
+	}
+	option = { #NATION WHO OWNS THE STATE (OWNED THE STATE WHEN FALL EVENT HAPPENED)
+		name = bettercitynews.33.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_stockholm_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_stockholm_controller
+            }
+        }
+	}
+	option = { #NOT OWNER NOR OLD CONTROLLER
+		name = bettercitynews.33.c
+		trigger = {
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_stockholm_owner
+				tag = event_target:bettercitynews_fall_of_stockholm_controller
+            }
+        }
+	}
+}
+
+# The Fall of Oslo
+news_event = {
+	id = bettercitynews.34
+	title = bettercitynews.34.t
+	desc = bettercitynews.34.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.34.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_oslo_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_oslo_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.34.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_oslo_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_oslo_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.34.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_oslo_owner
+				tag = event_target:bettercitynews_fall_of_oslo_controller
+            }
+        }
+	}
+}
+
+# The Liberation of Oslo
+news_event = {
+	id = bettercitynews.35
+	title = bettercitynews.35.t
+	desc = bettercitynews.35.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+		name = bettercitynews.35.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_oslo_controller
+           	NOT = {
+                tag = event_target:bettercitynews_fall_of_oslo_owner
+            }
+		}
+	}
+	option = { #NATION WHO OWNS THE STATE (OWNED THE STATE WHEN FALL EVENT HAPPENED)
+		name = bettercitynews.35.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_oslo_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_oslo_controller
+            }
+        }
+	}
+	option = { #NOT OWNER NOR OLD CONTROLLER
+		name = bettercitynews.35.c
+		trigger = {
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_oslo_owner
+				tag = event_target:bettercitynews_fall_of_oslo_controller
+            }
+        }
+	}
+}
+
+# The Fall of Helsinki
+news_event = {
+	id = bettercitynews.36
+	title = bettercitynews.36.t
+	desc = bettercitynews.36.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.36.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_helsinki_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_helsinki_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.36.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_helsinki_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_helsinki_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.36.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_helsinki_owner
+				tag = event_target:bettercitynews_fall_of_helsinki_controller
+            }
+        }
+	}
+}
+
+# The Liberation of Helsinki
+news_event = {
+	id = bettercitynews.37
+	title = bettercitynews.37.t
+	desc = bettercitynews.37.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+		name = bettercitynews.37.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_helsinki_controller
+           	NOT = {
+                tag = event_target:bettercitynews_fall_of_helsinki_owner
+            }
+		}
+	}
+	option = { #NATION WHO OWNS THE STATE (OWNED THE STATE WHEN FALL EVENT HAPPENED)
+		name = bettercitynews.37.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_helsinki_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_helsinki_controller
+            }
+        }
+	}
+	option = { #NOT OWNER NOR OLD CONTROLLER
+		name = bettercitynews.37.c
+		trigger = {
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_helsinki_owner
+				tag = event_target:bettercitynews_fall_of_helsinki_controller
+            }
+        }
+	}
+}
