@@ -1566,3 +1566,803 @@ news_event = {
         }
 	}
 }
+
+# The Fall of Ottawa
+news_event = {
+	id = bettercitynews.38
+	title = bettercitynews.38.t
+	desc = bettercitynews.38.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.38.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_ottawa_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_ottawa_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.38.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_ottawa_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_ottawa_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.38.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_ottawa_owner
+				tag = event_target:bettercitynews_fall_of_ottawa_controller
+            }
+        }
+	}
+}
+
+# The Liberation of Ottawa
+news_event = {
+	id = bettercitynews.39
+	title = bettercitynews.39.t
+	desc = bettercitynews.39.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+		name = bettercitynews.39.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_ottawa_controller
+           	NOT = {
+                tag = event_target:bettercitynews_fall_of_ottawa_owner
+            }
+		}
+	}
+	option = { #NATION WHO OWNS THE STATE (OWNED THE STATE WHEN FALL EVENT HAPPENED)
+		name = bettercitynews.39.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_ottawa_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_ottawa_controller
+            }
+        }
+	}
+	option = { #NOT OWNER NOR OLD CONTROLLER
+		name = bettercitynews.39.c
+		trigger = {
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_ottawa_owner
+				tag = event_target:bettercitynews_fall_of_ottawa_controller
+            }
+        }
+	}
+}
+
+# The Fall of Montréal
+news_event = {
+	id = bettercitynews.40
+	title = bettercitynews.40.t
+	desc = bettercitynews.40.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.40.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_montreal_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_montreal_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.40.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_montreal_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_montreal_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.40.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_montreal_owner
+				tag = event_target:bettercitynews_fall_of_montreal_controller
+            }
+        }
+	}
+}
+
+# The Fall of Vancouver
+news_event = {
+	id = bettercitynews.41
+	title = bettercitynews.41.t
+	desc = bettercitynews.41.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.41.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_vancouver_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_vancouver_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.41.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_vancouver_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_vancouver_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.41.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_vancouver_owner
+				tag = event_target:bettercitynews_fall_of_vancouver_controller
+            }
+        }
+	}
+}
+
+# The Fall of Washington
+news_event = {
+	id = bettercitynews.42
+	title = bettercitynews.42.t
+	desc = bettercitynews.42.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.42.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_washington_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_washington_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.42.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_washington_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_washington_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.42.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_washington_owner
+				tag = event_target:bettercitynews_fall_of_washington_controller
+            }
+        }
+	}
+}
+
+# The Liberation of Washington
+news_event = {
+	id = bettercitynews.43
+	title = bettercitynews.43.t
+	desc = bettercitynews.43.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+		name = bettercitynews.43.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_washington_controller
+           	NOT = {
+                tag = event_target:bettercitynews_fall_of_washington_owner
+            }
+		}
+	}
+	option = { #NATION WHO OWNS THE STATE (OWNED THE STATE WHEN FALL EVENT HAPPENED)
+		name = bettercitynews.43.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_washington_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_washington_controller
+            }
+        }
+	}
+	option = { #NOT OWNER NOR OLD CONTROLLER
+		name = bettercitynews.43.c
+		trigger = {
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_washington_owner
+				tag = event_target:bettercitynews_fall_of_washington_controller
+            }
+        }
+	}
+}
+
+# The Fall of Philadelphia
+news_event = {
+	id = bettercitynews.44
+	title = bettercitynews.44.t
+	desc = bettercitynews.44.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.44.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_philadelphia_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_philadelphia_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.44.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_philadelphia_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_philadelphia_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.44.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_philadelphia_owner
+				tag = event_target:bettercitynews_fall_of_philadelphia_controller
+            }
+        }
+	}
+}
+
+# The Fall of Los Angeles
+news_event = {
+	id = bettercitynews.45
+	title = bettercitynews.45.t
+	desc = bettercitynews.45.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.45.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_losangeles_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_losangeles_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.45.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_losangeles_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_losangeles_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.45.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_losangeles_owner
+				tag = event_target:bettercitynews_fall_of_losangeles_controller
+            }
+        }
+	}
+}
+
+# The Fall of New York
+news_event = {
+	id = bettercitynews.46
+	title = bettercitynews.46.t
+	desc = bettercitynews.46.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.46.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_newyork_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_newyork_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.46.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_newyork_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_newyork_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.46.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_newyork_owner
+				tag = event_target:bettercitynews_fall_of_newyork_controller
+            }
+        }
+	}
+}
+
+# The Fall of Boston
+news_event = {
+	id = bettercitynews.47
+	title = bettercitynews.47.t
+	desc = bettercitynews.47.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.47.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_boston_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_boston_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.47.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_boston_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_boston_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.47.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_boston_owner
+				tag = event_target:bettercitynews_fall_of_boston_controller
+            }
+        }
+	}
+}
+
+# The Fall of Chicago
+news_event = {
+	id = bettercitynews.48
+	title = bettercitynews.48.t
+	desc = bettercitynews.48.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.48.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_chicago_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_chicago_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.48.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_chicago_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_chicago_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.48.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_chicago_owner
+				tag = event_target:bettercitynews_fall_of_chicago_controller
+            }
+        }
+	}
+}
+
+# The Fall of Mexico City
+news_event = {
+	id = bettercitynews.49
+	title = bettercitynews.49.t
+	desc = bettercitynews.49.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.49.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_mexicocity_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_mexicocity_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.49.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_mexicocity_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_mexicocity_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.49.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_mexicocity_owner
+				tag = event_target:bettercitynews_fall_of_mexicocity_controller
+            }
+        }
+	}
+}
+
+# The Liberation of Mexico City
+news_event = {
+	id = bettercitynews.50
+	title = bettercitynews.50.t
+	desc = bettercitynews.50.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+		name = bettercitynews.50.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_mexicocity_controller
+           	NOT = {
+                tag = event_target:bettercitynews_fall_of_mexicocity_owner
+            }
+		}
+	}
+	option = { #NATION WHO OWNS THE STATE (OWNED THE STATE WHEN FALL EVENT HAPPENED)
+		name = bettercitynews.50.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_mexicocity_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_mexicocity_controller
+            }
+        }
+	}
+	option = { #NOT OWNER NOR OLD CONTROLLER
+		name = bettercitynews.50.c
+		trigger = {
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_mexicocity_owner
+				tag = event_target:bettercitynews_fall_of_mexicocity_controller
+            }
+        }
+	}
+}
+
+# The Fall of Panama Canal
+news_event = {
+	id = bettercitynews.51
+	title = bettercitynews.51.t
+	desc = bettercitynews.51.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.51.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_panamacanal_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_panamacanal_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.51.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_panamacanal_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_panamacanal_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.51.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_panamacanal_owner
+				tag = event_target:bettercitynews_fall_of_panamacanal_controller
+            }
+        }
+	}
+}
+
+# The Fall of Rio de Janeiro
+news_event = {
+	id = bettercitynews.52
+	title = bettercitynews.52.t
+	desc = bettercitynews.52.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.52.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_riodejaneiro_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_riodejaneiro_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.52.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_riodejaneiro_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_riodejaneiro_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.52.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_riodejaneiro_owner
+				tag = event_target:bettercitynews_fall_of_riodejaneiro_controller
+            }
+        }
+	}
+}
+
+# The Liberation of Rio de Janeiro
+news_event = {
+	id = bettercitynews.53
+	title = bettercitynews.53.t
+	desc = bettercitynews.53.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+		name = bettercitynews.53.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_riodejaneiro_controller
+           	NOT = {
+                tag = event_target:bettercitynews_fall_of_riodejaneiro_owner
+            }
+		}
+	}
+	option = { #NATION WHO OWNS THE STATE (OWNED THE STATE WHEN FALL EVENT HAPPENED)
+		name = bettercitynews.53.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_riodejaneiro_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_riodejaneiro_controller
+            }
+        }
+	}
+	option = { #NOT OWNER NOR OLD CONTROLLER
+		name = bettercitynews.53.c
+		trigger = {
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_riodejaneiro_owner
+				tag = event_target:bettercitynews_fall_of_riodejaneiro_controller
+            }
+        }
+	}
+}
+
+# The Fall of Sao Paulo
+news_event = {
+	id = bettercitynews.54
+	title = bettercitynews.54.t
+	desc = bettercitynews.54.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.54.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_saopaulo_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_saopaulo_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.54.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_saopaulo_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_saopaulo_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.54.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_saopaulo_owner
+				tag = event_target:bettercitynews_fall_of_saopaulo_controller
+            }
+        }
+	}
+}
+
+# The Fall of Buenos Aires
+news_event = {
+	id = bettercitynews.55
+	title = bettercitynews.55.t
+	desc = bettercitynews.55.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.55.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_buenosaires_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_buenosaires_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.55.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_buenosaires_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_buenosaires_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.55.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_buenosaires_owner
+				tag = event_target:bettercitynews_fall_of_buenosaires_controller
+            }
+        }
+	}
+}
+
+# The Liberation of Buenos Aires
+news_event = {
+	id = bettercitynews.56
+	title = bettercitynews.56.t
+	desc = bettercitynews.56.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+		name = bettercitynews.56.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_buenosaires_controller
+           	NOT = {
+                tag = event_target:bettercitynews_fall_of_buenosaires_owner
+            }
+		}
+	}
+	option = { #NATION WHO OWNS THE STATE (OWNED THE STATE WHEN FALL EVENT HAPPENED)
+		name = bettercitynews.56.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_buenosaires_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_buenosaires_controller
+            }
+        }
+	}
+	option = { #NOT OWNER NOR OLD CONTROLLER
+		name = bettercitynews.56.c
+		trigger = {
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_buenosaires_owner
+				tag = event_target:bettercitynews_fall_of_buenosaires_controller
+            }
+        }
+	}
+}
+
+# The Fall of Greenland
+news_event = {
+	id = bettercitynews.57
+	title = bettercitynews.57.t
+	desc = bettercitynews.57.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.57.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_greenland_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_greenland_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.57.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_greenland_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_greenland_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.57.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_greenland_owner
+				tag = event_target:bettercitynews_fall_of_greenland_controller
+            }
+        }
+	}
+}
