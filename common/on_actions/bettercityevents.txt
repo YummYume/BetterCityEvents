@@ -27,6 +27,9 @@ on_actions = {
 							state = 277 #Mexico City
 							state = 500 #Rio de Janeiro
 							state = 278 #Buenos Aires
+							state = 16 #Paris
+							state = 126 #London
+							state = 64 #Berlin
 						}
 					}
 				}
@@ -1585,6 +1588,309 @@ on_actions = {
 							clr_global_flag = bettercitynews_fall_of_buenosaires
 							set_global_flag = bettercitynews_liberation_of_buenosaires
 							news_event = { id = bettercitynews.56 hours = 5 }
+						}
+					}
+				}
+
+				else_if = { #Paris
+					limit = {
+						FROM.FROM = {
+							state = 16
+						}
+						NOT = {
+							OR = {
+								AND = {
+									16 = { is_controlled_by = GER }
+									16 = { is_owned_by = FRA }
+									FRA = { has_war_with = GER }
+								}
+								AND = {
+									16 = { is_controlled_by = ITA }
+									16 = { is_owned_by = FRA }
+									ITA = { has_war_with = FRA }
+								}
+								AND = {
+									16 = { is_controlled_by = SOV }
+									16 = { is_owned_by = FRA }
+									SOV = { has_war_with = FRA }
+								}
+							}
+						}
+					}
+					if = { #Captured
+						limit = {
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_fall_of_paris
+									has_global_flag = bettercitynews_liberation_of_paris
+								}
+							}
+							FROM = {
+								has_war_with = ROOT
+								owns_state = 16
+								NOT = {
+									controls_state = 16
+									has_capitulated = yes
+								}
+							}
+							ROOT = {
+								has_war_with = FROM
+								controls_state = 16
+								NOT = {
+									owns_state = 16
+								}
+							}
+						}
+						FROM = {
+							save_global_event_target_as = bettercitynews_fall_of_paris_owner
+							set_global_flag = bettercitynews_fall_of_paris
+						}
+						ROOT = {
+							save_global_event_target_as = bettercitynews_fall_of_paris_controller
+							news_event = { id = bettercitynews.58 hours = 5 }
+						}
+					}
+					else_if = { #Liberated
+						limit = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_paris
+								OR = {
+									NOT = {
+										has_global_flag = fall_of_france
+									}
+									has_global_flag = liberation_of_paris
+									has_global_flag = liberation_of_paris_sov
+								}
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_liberation_of_paris
+								}
+							}
+							FROM = {
+								tag = event_target:bettercitynews_fall_of_paris_controller
+								NOT = {
+									controls_state = 16
+									owns_state = 16
+									tag = event_target:bettercitynews_fall_of_paris_owner
+								}
+							}
+							ROOT = {
+								tag = event_target:bettercitynews_fall_of_paris_owner
+								controls_state = 16
+								owns_state = 16
+								NOT = {
+									tag = event_target:bettercitynews_fall_of_paris_controller
+								}
+							}
+						}
+						ROOT = {
+							clr_global_flag = bettercitynews_fall_of_paris
+							set_global_flag = bettercitynews_liberation_of_paris
+							news_event = { id = bettercitynews.59 hours = 5 }
+						}
+					}
+				}
+
+				else_if = { #London
+					limit = {
+						FROM.FROM = {
+							state = 126
+						}
+						NOT = {
+							OR = {
+								AND = {
+									126 = { is_controlled_by = GER }
+									126 = { is_owned_by = ENG }
+									GER = { has_war_with = ENG }
+								}
+								AND = {
+									126 = { is_controlled_by = ITA }
+									126 = { is_owned_by = ENG }
+									ITA = { has_war_with = ENG }
+								}
+								AND = {
+									126 = { is_controlled_by = SOV }
+									126 = { is_owned_by = ENG }
+									SOV = { has_war_with = ENG }
+								}
+							}
+						}
+					}
+					if = { #Captured
+						limit = {
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_fall_of_london
+									has_global_flag = bettercitynews_liberation_of_london
+								}
+							}
+							FROM = {
+								has_war_with = ROOT
+								owns_state = 126
+								NOT = {
+									controls_state = 126
+									has_capitulated = yes
+								}
+							}
+							ROOT = {
+								has_war_with = FROM
+								controls_state = 126
+								NOT = {
+									owns_state = 126
+								}
+							}
+						}
+						FROM = {
+							save_global_event_target_as = bettercitynews_fall_of_london_owner
+							set_global_flag = bettercitynews_fall_of_london
+						}
+						ROOT = {
+							save_global_event_target_as = bettercitynews_fall_of_london_controller
+							news_event = { id = bettercitynews.60 hours = 5 }
+						}
+					}
+					else_if = { #Liberated
+						limit = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_london
+								OR = {
+									NOT = {
+										has_global_flag = fall_of_london_ger
+									}
+									has_global_flag = liberation_of_london
+									has_global_flag = liberation_of_london_sov
+								}
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_liberation_of_london
+								}
+							}
+							FROM = {
+								tag = event_target:bettercitynews_fall_of_london_controller
+								NOT = {
+									controls_state = 126
+									owns_state = 126
+									tag = event_target:bettercitynews_fall_of_london_owner
+								}
+							}
+							ROOT = {
+								tag = event_target:bettercitynews_fall_of_london_owner
+								controls_state = 126
+								owns_state = 126
+								NOT = {
+									tag = event_target:bettercitynews_fall_of_london_controller
+								}
+							}
+						}
+						ROOT = {
+							clr_global_flag = bettercitynews_fall_of_london
+							set_global_flag = bettercitynews_liberation_of_london
+							news_event = { id = bettercitynews.61 hours = 5 }
+						}
+					}
+				}
+
+				else_if = { #Berlin
+					limit = {
+						FROM.FROM = {
+							state = 64
+						}
+						NOT = {
+							OR = {
+								AND = {
+									64 = { is_controlled_by = USA }
+									64 = { is_owned_by = GER }
+									USA = { has_war_with = GER }
+								}
+								AND = {
+									64 = { is_controlled_by = ENG }
+									64 = { is_owned_by = GER }
+									ENG = { has_war_with = GER }
+								}
+								AND = {
+									64 = { is_controlled_by = FRA }
+									64 = { is_owned_by = GER }
+									FRA = { has_war_with = GER }
+								}
+								AND = {
+									64 = { is_controlled_by = POL }
+									64 = { is_owned_by = GER }
+									POL = { has_war_with = GER }
+								}
+								AND = {
+									64 = { is_controlled_by = SOV }
+									64 = { is_owned_by = GER }
+									GER = { has_war_with = SOV }
+								}
+							}
+						}
+					}
+					if = { #Captured
+						limit = {
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_fall_of_berlin
+									has_global_flag = bettercitynews_liberation_of_berlin
+								}
+							}
+							FROM = {
+								has_war_with = ROOT
+								owns_state = 64
+								NOT = {
+									controls_state = 64
+									has_capitulated = yes
+								}
+							}
+							ROOT = {
+								has_war_with = FROM
+								controls_state = 64
+								NOT = {
+									owns_state = 64
+								}
+							}
+						}
+						FROM = {
+							save_global_event_target_as = bettercitynews_fall_of_berlin_owner
+							set_global_flag = bettercitynews_fall_of_berlin
+						}
+						ROOT = {
+							save_global_event_target_as = bettercitynews_fall_of_berlin_controller
+							news_event = { id = bettercitynews.62 hours = 5 }
+						}
+					}
+					else_if = { #Liberated
+						limit = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_berlin
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_liberation_of_berlin
+								}
+							}
+							FROM = {
+								tag = event_target:bettercitynews_fall_of_berlin_controller
+								NOT = {
+									controls_state = 64
+									owns_state = 64
+									tag = event_target:bettercitynews_fall_of_berlin_owner
+								}
+							}
+							ROOT = {
+								tag = event_target:bettercitynews_fall_of_berlin_owner
+								controls_state = 64
+								owns_state = 64
+								NOT = {
+									tag = event_target:bettercitynews_fall_of_berlin_controller
+								}
+							}
+						}
+						ROOT = {
+							clr_global_flag = bettercitynews_fall_of_berlin
+							set_global_flag = bettercitynews_liberation_of_berlin
+							news_event = { id = bettercitynews.63 hours = 5 }
 						}
 					}
 				}
