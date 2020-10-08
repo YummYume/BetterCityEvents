@@ -1,8 +1,8 @@
 spriteTypes = {
 	
-#	spriteType = {
-#		name = ""
-#		texturefile = "gfx/event_pictures/.dds"
-#	}
+	spriteType = {
+		name = "GFX_bettercityevents_fall_chicago"
+		texturefile = "gfx/event_pictures/bettercityevents_fall_chicago.dds"
+	}
 
 }
