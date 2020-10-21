@@ -51,7 +51,7 @@ news_event = {
 
 	is_triggered_only = yes
 	
-	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews..a
 		trigger = {
 			tag = event_target:bettercitynews_fall_of__controller

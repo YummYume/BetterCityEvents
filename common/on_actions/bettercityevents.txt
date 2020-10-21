@@ -30,6 +30,12 @@ on_actions = {
 							state = 16 #Paris
 							state = 126 #London
 							state = 64 #Berlin
+							state = 797 #Istanbul
+						}
+					}
+					FROM = {
+						NOT = {
+							has_civil_war = yes
 						}
 					}
 				}
@@ -1895,6 +1901,80 @@ on_actions = {
 					}
 				}
 
+				else_if = { #Istabul
+					limit = {
+						FROM.FROM = {
+							state = 797
+						}
+					}
+					if = { #Captured
+						limit = {
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_fall_of_istanbul
+									has_global_flag = bettercitynews_liberation_of_istanbul
+								}
+							}
+							FROM = {
+								has_war_with = ROOT
+								owns_state = 797
+								NOT = {
+									controls_state = 797
+									has_capitulated = yes
+								}
+							}
+							ROOT = {
+								has_war_with = FROM
+								controls_state = 797
+								NOT = {
+									owns_state = 797
+								}
+							}
+						}
+						FROM = {
+							save_global_event_target_as = bettercitynews_fall_of_istanbul_owner
+							set_global_flag = bettercitynews_fall_of_istanbul
+						}
+						ROOT = {
+							save_global_event_target_as = bettercitynews_fall_of_istanbul_controller
+							news_event = { id = bettercitynews.64 hours = 5 }
+						}
+					}
+					else_if = { #Liberated
+						limit = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_istanbul
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_liberation_of_istanbul
+								}
+							}
+							FROM = {
+								tag = event_target:bettercitynews_fall_of_istanbul_controller
+								NOT = {
+									controls_state = 797
+									owns_state = 797
+									tag = event_target:bettercitynews_fall_of_istanbul_owner
+								}
+							}
+							ROOT = {
+								tag = event_target:bettercitynews_fall_of_istanbul_owner
+								controls_state = 797
+								owns_state = 797
+								NOT = {
+									tag = event_target:bettercitynews_fall_of_istanbul_controller
+								}
+							}
+						}
+						ROOT = {
+							clr_global_flag = bettercitynews_fall_of_istanbul
+							set_global_flag = bettercitynews_liberation_of_istanbul
+							news_event = { id = bettercitynews.65 hours = 5 }
+						}
+					}
+				}
+
 			}
 		}
 	}
@@ -1923,6 +2003,11 @@ on_actions = {
 							state = 685 #Panama Canal
 							state = 501 #Sao Paulo
 							state = 101 #Greendland
+						}
+					}
+					FROM = {
+						NOT = {
+							has_civil_war = yes
 						}
 					}
 				}
