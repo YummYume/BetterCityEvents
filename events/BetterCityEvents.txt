@@ -1972,7 +1972,7 @@ news_event = {
 	id = bettercitynews.48
 	title = bettercitynews.48.t
 	desc = bettercitynews.48.d
-	picture = GFX_bettercityevents_
+	picture = GFX_bettercityevents_fall_chicago
 	
 	major = yes
 	
