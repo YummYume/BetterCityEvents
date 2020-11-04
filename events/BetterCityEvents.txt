@@ -92,7 +92,7 @@ news_event = {
 	id = bettercitynews.1
 	title = bettercitynews.1.t
 	desc = bettercitynews.1.d
-	picture = GFX_news_event_germany_victory
+	picture = GFX_bettercityevents_fall_dublin
 	
 	major = yes
 	
