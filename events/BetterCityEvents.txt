@@ -54,7 +54,7 @@
 #
 #	is_triggered_only = yes
 #	
-#	option = { NATION WHO OCCUPIER (CONTROLLED) THE STATE
+#	option = { NATION WHO OCCUPIED (CONTROLLED) THE STATE
 #		name = bettercitynews..a
 #		trigger = {
 #			tag = event_target:bettercitynews_fall_of__controller
@@ -418,7 +418,7 @@ news_event = {
 
 	is_triggered_only = yes
 	
-	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews.9.a
 		trigger = {
 			tag = event_target:bettercitynews_fall_of_luxemburg_controller
@@ -538,7 +538,7 @@ news_event = {
 
 	is_triggered_only = yes
 	
-	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews.12.a
 		trigger = {
 			tag = event_target:bettercitynews_fall_of_amsterdam_controller
@@ -618,7 +618,7 @@ news_event = {
 
 	is_triggered_only = yes
 	
-	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews.14.a
 		trigger = {
 			tag = event_target:bettercitynews_fall_of_vienna_controller
@@ -698,7 +698,7 @@ news_event = {
 
 	is_triggered_only = yes
 	
-	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews.16.a
 		trigger = {
 			tag = event_target:bettercitynews_fall_of_budapest_controller
@@ -778,7 +778,7 @@ news_event = {
 
 	is_triggered_only = yes
 	
-	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews.18.a
 		trigger = {
 			tag = event_target:bettercitynews_fall_of_bucharest_controller
@@ -858,7 +858,7 @@ news_event = {
 
 	is_triggered_only = yes
 	
-	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews.20.a
 		trigger = {
 			tag = event_target:bettercitynews_fall_of_sofia_controller
@@ -938,7 +938,7 @@ news_event = {
 
 	is_triggered_only = yes
 	
-	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews.22.a
 		trigger = {
 			tag = event_target:bettercitynews_fall_of_athens_controller
@@ -1018,7 +1018,7 @@ news_event = {
 
 	is_triggered_only = yes
 	
-	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews.24.a
 		trigger = {
 			tag = event_target:bettercitynews_fall_of_belgrade_controller
@@ -1138,7 +1138,7 @@ news_event = {
 
 	is_triggered_only = yes
 	
-	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews.27.a
 		trigger = {
 			tag = event_target:bettercitynews_fall_of_prague_controller
@@ -1298,7 +1298,7 @@ news_event = {
 
 	is_triggered_only = yes
 	
-	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews.31.a
 		trigger = {
 			tag = event_target:bettercitynews_fall_of_copenhagen_controller
@@ -1378,7 +1378,7 @@ news_event = {
 
 	is_triggered_only = yes
 	
-	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews.33.a
 		trigger = {
 			tag = event_target:bettercitynews_fall_of_stockholm_controller
@@ -1458,7 +1458,7 @@ news_event = {
 
 	is_triggered_only = yes
 	
-	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews.35.a
 		trigger = {
 			tag = event_target:bettercitynews_fall_of_oslo_controller
@@ -1538,7 +1538,7 @@ news_event = {
 
 	is_triggered_only = yes
 	
-	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews.37.a
 		trigger = {
 			tag = event_target:bettercitynews_fall_of_helsinki_controller
@@ -1618,7 +1618,7 @@ news_event = {
 
 	is_triggered_only = yes
 	
-	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews.39.a
 		trigger = {
 			tag = event_target:bettercitynews_fall_of_ottawa_controller
@@ -1778,7 +1778,7 @@ news_event = {
 
 	is_triggered_only = yes
 	
-	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews.43.a
 		trigger = {
 			tag = event_target:bettercitynews_fall_of_washington_controller
@@ -2058,7 +2058,7 @@ news_event = {
 
 	is_triggered_only = yes
 	
-	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews.50.a
 		trigger = {
 			tag = event_target:bettercitynews_fall_of_mexicocity_controller
@@ -2178,7 +2178,7 @@ news_event = {
 
 	is_triggered_only = yes
 	
-	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews.53.a
 		trigger = {
 			tag = event_target:bettercitynews_fall_of_riodejaneiro_controller
@@ -2298,7 +2298,7 @@ news_event = {
 
 	is_triggered_only = yes
 	
-	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews.56.a
 		trigger = {
 			tag = event_target:bettercitynews_fall_of_buenosaires_controller
@@ -2418,7 +2418,7 @@ news_event = {
 
 	is_triggered_only = yes
 	
-	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews.59.a
 		trigger = {
 			tag = event_target:bettercitynews_fall_of_paris_controller
@@ -2498,7 +2498,7 @@ news_event = {
 
 	is_triggered_only = yes
 	
-	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews.61.a
 		trigger = {
 			tag = event_target:bettercitynews_fall_of_london_controller
@@ -2578,7 +2578,7 @@ news_event = {
 
 	is_triggered_only = yes
 	
-	option = { #NATION WHO OCCUPIER (CONTROLLED) THE STATE
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
 		name = bettercitynews.63.a
 		trigger = {
 			tag = event_target:bettercitynews_fall_of_berlin_controller
@@ -2606,3 +2606,253 @@ news_event = {
         }
 	}
 }
+
+# The Fall of Istanbul
+news_event = {
+	id = bettercitynews.64
+	title = bettercitynews.64.t
+	desc = bettercitynews.64.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.64.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_istanbul_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_istanbul_controller
+				tag = GRE
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.64.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_istanbul_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_istanbul_owner
+				tag = GRE
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.64.c
+		trigger = {
+            NOT = {
+            	tag = event_target:bettercitynews_fall_of_istanbul_owner
+				tag = event_target:bettercitynews_fall_of_istanbul_controller
+				tag = GRE
+            }
+        }
+	}
+	option = { #GREECE
+		name = bettercitynews.64.e
+		trigger = {
+            tag = GRE
+        }
+	}
+}
+
+# The Liberation of Istanbul
+news_event = {
+	id = bettercitynews.65
+	title = bettercitynews.65.t
+	desc = bettercitynews.65.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
+		name = bettercitynews.65.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_istanbul_controller
+           	NOT = {
+                tag = event_target:bettercitynews_fall_of_istanbul_owner
+            }
+		}
+	}
+	option = { #NATION WHO OWNS THE STATE (OWNED THE STATE WHEN FALL EVENT HAPPENED)
+		name = bettercitynews.65.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_istanbul_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_istanbul_controller
+            }
+        }
+	}
+	option = { #NOT OWNER NOR OLD CONTROLLER
+		name = bettercitynews.65.c
+		trigger = {
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_istanbul_owner
+				tag = event_target:bettercitynews_fall_of_istanbul_controller
+            }
+        }
+	}
+}
+
+# The Fall of Ankara
+news_event = {
+	id = bettercitynews.66
+	title = bettercitynews.66.t
+	desc = bettercitynews.66.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.66.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_ankara_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_ankara_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.66.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_ankara_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_ankara_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.66.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_ankara_owner
+				tag = event_target:bettercitynews_fall_of_ankara_controller
+            }
+        }
+	}
+}
+
+# The Fall of Izmir
+news_event = {
+	id = bettercitynews.67
+	title = bettercitynews.67.t
+	desc = bettercitynews.67.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.67.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_izmir_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_izmir_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.67.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_izmir_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_izmir_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.67.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_izmir_owner
+				tag = event_target:bettercitynews_fall_of_izmir_controller
+            }
+        }
+	}
+}
+
+# The Fall of Rome
+news_event = {
+	id = bettercitynews.68
+	title = bettercitynews.68.t
+	desc = bettercitynews.68.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = { #CURRENT OWNER
+		name = bettercitynews.68.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_rome_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_rome_controller
+            }
+		}
+	}
+	option = { #CURRENT CONTROLLER
+		name = bettercitynews.68.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_rome_controller
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_rome_owner
+            }
+        }
+	}
+	option = { #NOT OWNER NOR CONTROLLER
+		name = bettercitynews.68.c
+		trigger = {
+            NOT = {
+            tag = event_target:bettercitynews_fall_of_rome_owner
+				tag = event_target:bettercitynews_fall_of_rome_controller
+            }
+        }
+	}
+}
+
+# The Liberation of Rome
+news_event = {
+	id = bettercitynews.69
+	title = bettercitynews.69.t
+	desc = bettercitynews.69.d
+	picture = GFX_bettercityevents_
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = { #NATION WHO OCCUPIED (CONTROLLED) THE STATE
+		name = bettercitynews.69.a
+		trigger = {
+			tag = event_target:bettercitynews_fall_of_rome_controller
+           	NOT = {
+                tag = event_target:bettercitynews_fall_of_rome_owner
+            }
+		}
+	}
+	option = { #NATION WHO OWNS THE STATE (OWNED THE STATE WHEN FALL EVENT HAPPENED)
+		name = bettercitynews.69.b
+		trigger = {
+            tag = event_target:bettercitynews_fall_of_rome_owner
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_rome_controller
+            }
+        }
+	}
+	option = { #NOT OWNER NOR OLD CONTROLLER
+		name = bettercitynews.69.c
+		trigger = {
+            NOT = {
+                tag = event_target:bettercitynews_fall_of_rome_owner
+				tag = event_target:bettercitynews_fall_of_rome_controller
+            }
+        }
+	}
+}
+

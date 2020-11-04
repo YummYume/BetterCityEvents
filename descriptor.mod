@@ -6,5 +6,5 @@ tags={
 	"Utilities"
 	"Map"
 }
-name="BetterCityEvents"
+name="Better City Events"
 supported_version="1.10.1"
