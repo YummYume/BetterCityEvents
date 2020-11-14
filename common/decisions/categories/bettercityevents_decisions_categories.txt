@@ -1,0 +1,18 @@
+bettercityevents_decisions = {
+
+	icon = GFX_decision_category_generic_propaganda
+
+  picture = GFX_decision_cat_picture_faction_management_bulgaria
+
+  allowed = {
+
+  }
+
+  available = {
+    
+  }
+
+  visible = {
+    is_ai = no
+  }
+}

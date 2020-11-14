@@ -1,0 +1,25 @@
+defined_text = {
+	name = GetNonCapitalEventStatus
+	text = {
+		trigger = {
+			has_global_flag = bettercityevents_capitals_disabled
+		}
+		localization_key = BETTERCITYEVENTS_CAPITAL_CITIES_DISABLED_LOC
+	}
+	text = {
+		localization_key = BETTERCITYEVENTS_CAPITAL_CITIES_ENABLED_LOC
+	}
+}
+
+defined_text = {
+    name = GetLiberationEventStatus
+	text = {
+		trigger = {
+			has_global_flag = bettercityevents_liberation_disabled
+		}
+		localization_key = BETTERCITYEVENTS_LIBERATION_CITIES_DISABLED_LOC
+	}
+	text = {
+		localization_key = BETTERCITYEVENTS_LIBERATION_CITIES_ENABLED_LOC
+	}
+}

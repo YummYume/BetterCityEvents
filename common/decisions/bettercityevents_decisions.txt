@@ -1,0 +1,98 @@
+bettercityevents_decisions = {
+
+	bettercityevents_disable_non_capital_cities = {
+
+		icon = GFX_decision_generic_break_treaty
+
+		allowed = {
+
+		}
+
+        visible = {
+            is_ai = no
+            NOT = {
+                has_global_flag = bettercityevents_capitals_disabled
+            }
+        }
+
+		available = {
+			
+		}
+
+		complete_effect = {
+			set_global_flag = bettercityevents_capitals_disabled
+            custom_effect_tooltip = bettercityevents_disable_non_capital_cities_tt
+		}
+	}
+
+	bettercityevents_enable_non_capital_cities = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+
+		}
+
+        visible = {
+            is_ai = no
+            has_global_flag = bettercityevents_capitals_disabled
+        }
+
+		available = {
+			
+		}
+
+		complete_effect = {
+			clr_global_flag = bettercityevents_capitals_disabled
+            custom_effect_tooltip = bettercityevents_enable_non_capital_cities_tt
+		}
+	}
+
+    bettercityevents_disable_liberation_cities = {
+
+		icon = GFX_decision_generic_break_treaty
+
+		allowed = {
+
+		}
+
+        visible = {
+            is_ai = no
+            NOT = {
+                has_global_flag = bettercityevents_liberation_disabled
+            }
+        }
+
+		available = {
+			
+		}
+
+		complete_effect = {
+			set_global_flag = bettercityevents_liberation_disabled
+            custom_effect_tooltip = bettercityevents_disable_liberation_cities_tt
+		}
+	}
+
+	bettercityevents_enable_liberation_cities = {
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		allowed = {
+
+		}
+
+        visible = {
+            is_ai = no
+            has_global_flag = bettercityevents_liberation_disabled
+        }
+
+		available = {
+			
+		}
+
+		complete_effect = {
+			clr_global_flag = bettercityevents_liberation_disabled
+            custom_effect_tooltip = bettercityevents_enable_liberation_cities_tt
+		}
+	}
+}
