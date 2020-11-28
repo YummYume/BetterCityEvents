@@ -3489,6 +3489,34 @@ on_actions = {
 								has_global_flag = bettercitynews_fall_of_gibraltar
 							}
 						}
+						NOT = {
+							OR = {
+								AND = {
+									118 = { is_controlled_by = GER }
+									118 = { is_owned_by = ENG }
+									GER = { has_war_with = ENG }
+								}
+								AND = {
+									118 = { is_controlled_by = ITA }
+									118 = { is_owned_by = ENG }
+									ITA = { has_war_with = ENG }
+								}
+								AND = {
+									any_other_country = {
+										original_tag = SPR
+										controls_state = 118
+										has_war_with = ENG
+									}
+									118 = { is_owned_by = ENG }
+									NOT = {
+										AND = {
+											has_global_flag = spanish_civil_war
+											NOT = { has_global_flag = scw_over }
+										}
+									}
+								}
+							}
+						}
 						FROM = {
 							has_war_with = ROOT
 							owns_state = 118
