@@ -1,4 +1,4 @@
-version="0.1"
+version="1.0.0"
 tags={
 	"Events"
 	"Fixes"
@@ -7,4 +7,4 @@ tags={
 	"Map"
 }
 name="Better City Events"
-supported_version="1.10.1"
+supported_version="1.10.3"

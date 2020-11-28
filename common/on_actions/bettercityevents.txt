@@ -31,12 +31,20 @@ on_actions = {
 							state = 126 #London
 							state = 64 #Berlin
 							state = 797 #Istanbul
++							state = 2 #Rome
+							state = 41 #Madrid
+							state = 10 #Warsaw
+							state = 100 #Reykjavík
 						}
 					}
-					FROM = {
+					FROM = { #Do not trigger if the other side is the same country (civil war)
 						NOT = {
-							has_civil_war = yes
+							original_tag = ROOT
 						}
+						has_war_with = ROOT
+					}
+					ROOT = {
+						has_war_with = FROM
 					}
 				}
 				if = { #Dublin
@@ -49,12 +57,13 @@ on_actions = {
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_dublin
-									has_global_flag = bettercitynews_liberation_of_dublin
+									OR = {
+										has_global_flag = bettercitynews_fall_of_dublin
+										has_global_flag = bettercitynews_liberation_of_dublin
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 113
 								NOT = {
 									controls_state = 113
@@ -62,7 +71,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 113
 								NOT = {
 									owns_state = 113
@@ -80,6 +88,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_dublin
 							}
@@ -123,12 +134,13 @@ on_actions = {
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_lisbon
-									has_global_flag = bettercitynews_liberation_of_lisbon
+									OR = {
+										has_global_flag = bettercitynews_fall_of_lisbon
+										has_global_flag = bettercitynews_liberation_of_lisbon
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 112
 								NOT = {
 									controls_state = 112
@@ -136,7 +148,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 112
 								NOT = {
 									owns_state = 112
@@ -154,6 +165,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_lisbon
 							}
@@ -197,12 +211,13 @@ on_actions = {
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_berne
-									has_global_flag = bettercitynews_liberation_of_berne
+									OR = {
+										has_global_flag = bettercitynews_fall_of_berne
+										has_global_flag = bettercitynews_liberation_of_berne
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 3
 								NOT = {
 									controls_state = 3
@@ -210,7 +225,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 3
 								NOT = {
 									owns_state = 3
@@ -228,6 +242,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_berne
 							}
@@ -271,12 +288,13 @@ on_actions = {
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_luxemburg
-									has_global_flag = bettercitynews_liberation_of_luxemburg
+									OR = {
+										has_global_flag = bettercitynews_fall_of_luxemburg
+										has_global_flag = bettercitynews_liberation_of_luxemburg
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 8
 								NOT = {
 									controls_state = 8
@@ -284,7 +302,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 8
 								NOT = {
 									owns_state = 8
@@ -302,6 +319,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_luxemburg
 							}
@@ -345,12 +365,13 @@ on_actions = {
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_amsterdam
-									has_global_flag = bettercitynews_liberation_of_amsterdam
+									OR = {
+										has_global_flag = bettercitynews_fall_of_amsterdam
+										has_global_flag = bettercitynews_liberation_of_amsterdam
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 7
 								NOT = {
 									controls_state = 7
@@ -358,7 +379,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 7
 								NOT = {
 									owns_state = 7
@@ -376,6 +396,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_amsterdam
 							}
@@ -419,12 +442,13 @@ on_actions = {
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_vienna
-									has_global_flag = bettercitynews_liberation_of_vienna
+									OR = {
+										has_global_flag = bettercitynews_fall_of_vienna
+										has_global_flag = bettercitynews_liberation_of_vienna
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 4
 								NOT = {
 									controls_state = 4
@@ -432,7 +456,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 4
 								NOT = {
 									owns_state = 4
@@ -450,6 +473,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_vienna
 							}
@@ -493,12 +519,13 @@ on_actions = {
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_budapest
-									has_global_flag = bettercitynews_liberation_of_budapest
+									OR = {
+										has_global_flag = bettercitynews_fall_of_budapest
+										has_global_flag = bettercitynews_liberation_of_budapest
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 43
 								NOT = {
 									controls_state = 43
@@ -506,7 +533,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 43
 								NOT = {
 									owns_state = 43
@@ -524,6 +550,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_budapest
 							}
@@ -567,12 +596,13 @@ on_actions = {
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_bucharest
-									has_global_flag = bettercitynews_liberation_of_bucharest
+									OR = {
+										has_global_flag = bettercitynews_fall_of_bucharest
+										has_global_flag = bettercitynews_liberation_of_bucharest
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 46
 								NOT = {
 									controls_state = 46
@@ -580,7 +610,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 46
 								NOT = {
 									owns_state = 46
@@ -598,6 +627,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_bucharest
 							}
@@ -641,12 +673,13 @@ on_actions = {
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_sofia
-									has_global_flag = bettercitynews_liberation_of_sofia
+									OR = {
+										has_global_flag = bettercitynews_fall_of_sofia
+										has_global_flag = bettercitynews_liberation_of_sofia
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 48
 								NOT = {
 									controls_state = 48
@@ -654,7 +687,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 48
 								NOT = {
 									owns_state = 48
@@ -672,6 +704,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_sofia
 							}
@@ -715,12 +750,13 @@ on_actions = {
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_athens
-									has_global_flag = bettercitynews_liberation_of_athens
+									OR = {
+										has_global_flag = bettercitynews_fall_of_athens
+										has_global_flag = bettercitynews_liberation_of_athens
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 47
 								NOT = {
 									controls_state = 47
@@ -728,7 +764,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 47
 								NOT = {
 									owns_state = 47
@@ -746,6 +781,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_athens
 							}
@@ -789,12 +827,13 @@ on_actions = {
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_belgrade
-									has_global_flag = bettercitynews_liberation_of_belgrade
+									OR = {
+										has_global_flag = bettercitynews_fall_of_belgrade
+										has_global_flag = bettercitynews_liberation_of_belgrade
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 107
 								NOT = {
 									controls_state = 107
@@ -802,7 +841,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 107
 								NOT = {
 									owns_state = 107
@@ -820,6 +858,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_belgrade
 							}
@@ -863,12 +904,13 @@ on_actions = {
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_prague
-									has_global_flag = bettercitynews_liberation_of_prague
+									OR = {
+										has_global_flag = bettercitynews_fall_of_prague
+										has_global_flag = bettercitynews_liberation_of_prague
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 9
 								NOT = {
 									controls_state = 9
@@ -876,7 +918,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 9
 								NOT = {
 									owns_state = 9
@@ -894,6 +935,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_prague
 							}
@@ -937,12 +981,13 @@ on_actions = {
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_copenhagen
-									has_global_flag = bettercitynews_liberation_of_copenhagen
+									OR = {
+										has_global_flag = bettercitynews_fall_of_copenhagen
+										has_global_flag = bettercitynews_liberation_of_copenhagen
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 37
 								NOT = {
 									controls_state = 37
@@ -950,7 +995,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 37
 								NOT = {
 									owns_state = 37
@@ -968,6 +1012,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_copenhagen
 							}
@@ -1011,12 +1058,13 @@ on_actions = {
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_stockholm
-									has_global_flag = bettercitynews_liberation_of_stockholm
+									OR = {
+										has_global_flag = bettercitynews_fall_of_stockholm
+										has_global_flag = bettercitynews_liberation_of_stockholm
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 141
 								NOT = {
 									controls_state = 141
@@ -1024,7 +1072,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 141
 								NOT = {
 									owns_state = 141
@@ -1042,6 +1089,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_stockholm
 							}
@@ -1085,12 +1135,13 @@ on_actions = {
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_oslo
-									has_global_flag = bettercitynews_liberation_of_oslo
+									OR = {
+										has_global_flag = bettercitynews_fall_of_oslo
+										has_global_flag = bettercitynews_liberation_of_oslo
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 110
 								NOT = {
 									controls_state = 110
@@ -1098,7 +1149,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 110
 								NOT = {
 									owns_state = 110
@@ -1116,6 +1166,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_oslo
 							}
@@ -1159,12 +1212,13 @@ on_actions = {
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_helsinki
-									has_global_flag = bettercitynews_liberation_of_helsinki
+									OR = {
+										has_global_flag = bettercitynews_fall_of_helsinki
+										has_global_flag = bettercitynews_liberation_of_helsinki
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 111
 								NOT = {
 									controls_state = 111
@@ -1172,7 +1226,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 111
 								NOT = {
 									owns_state = 111
@@ -1190,6 +1243,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_helsinki
 							}
@@ -1233,12 +1289,13 @@ on_actions = {
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_ottawa
-									has_global_flag = bettercitynews_liberation_of_ottawa
+									OR = {
+										has_global_flag = bettercitynews_fall_of_ottawa
+										has_global_flag = bettercitynews_liberation_of_ottawa
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 276
 								NOT = {
 									controls_state = 276
@@ -1246,7 +1303,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 276
 								NOT = {
 									owns_state = 276
@@ -1264,6 +1320,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_ottawa
 							}
@@ -1302,22 +1361,25 @@ on_actions = {
 						FROM.FROM = {
 							state = 361
 						}
-						NOT = {
-							361 = { is_controlled_by = GER }
-							361 = { is_owned_by = USA }
-							GER = { has_war_with = USA }
-						}
 					}
 					if = { #Captured
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_washington
-									has_global_flag = bettercitynews_liberation_of_washington
+									OR = {
+										has_global_flag = bettercitynews_fall_of_washington
+										has_global_flag = bettercitynews_liberation_of_washington
+									}
+								}
+							}
+							NOT = {
+								AND = {
+									361 = { is_controlled_by = GER }
+									361 = { is_owned_by = USA }
+									GER = { has_war_with = USA }
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 361
 								NOT = {
 									controls_state = 361
@@ -1325,7 +1387,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 361
 								NOT = {
 									owns_state = 361
@@ -1343,6 +1404,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_washington
 							}
@@ -1386,12 +1450,13 @@ on_actions = {
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_mexicocity
-									has_global_flag = bettercitynews_liberation_of_mexicocity
+									OR = {
+										has_global_flag = bettercitynews_fall_of_mexicocity
+										has_global_flag = bettercitynews_liberation_of_mexicocity
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 277
 								NOT = {
 									controls_state = 277
@@ -1399,7 +1464,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 277
 								NOT = {
 									owns_state = 277
@@ -1417,6 +1481,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_mexicocity
 							}
@@ -1460,12 +1527,13 @@ on_actions = {
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_riodejaneiro
-									has_global_flag = bettercitynews_liberation_of_riodejaneiro
+									OR = {
+										has_global_flag = bettercitynews_fall_of_riodejaneiro
+										has_global_flag = bettercitynews_liberation_of_riodejaneiro
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 500
 								NOT = {
 									controls_state = 500
@@ -1473,7 +1541,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 500
 								NOT = {
 									owns_state = 500
@@ -1491,6 +1558,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_riodejaneiro
 							}
@@ -1534,12 +1604,13 @@ on_actions = {
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_buenosaires
-									has_global_flag = bettercitynews_liberation_of_buenosaires
+									OR = {
+										has_global_flag = bettercitynews_fall_of_buenosaires
+										has_global_flag = bettercitynews_liberation_of_buenosaires
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 278
 								NOT = {
 									controls_state = 278
@@ -1547,7 +1618,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 278
 								NOT = {
 									owns_state = 278
@@ -1565,6 +1635,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_buenosaires
 							}
@@ -1603,36 +1676,42 @@ on_actions = {
 						FROM.FROM = {
 							state = 16
 						}
-						NOT = {
-							OR = {
-								AND = {
-									16 = { is_controlled_by = GER }
-									16 = { is_owned_by = FRA }
-									FRA = { has_war_with = GER }
-								}
-								AND = {
-									16 = { is_controlled_by = ITA }
-									16 = { is_owned_by = FRA }
-									ITA = { has_war_with = FRA }
-								}
-								AND = {
-									16 = { is_controlled_by = SOV }
-									16 = { is_owned_by = FRA }
-									SOV = { has_war_with = FRA }
-								}
-							}
-						}
 					}
 					if = { #Captured
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_paris
-									has_global_flag = bettercitynews_liberation_of_paris
+									OR = {
+										has_global_flag = bettercitynews_fall_of_paris
+										has_global_flag = bettercitynews_liberation_of_paris
+									}
+								}
+							}
+							NOT = {
+								OR = {
+									AND = {
+										16 = { is_controlled_by = GER }
+										16 = { is_owned_by = FRA }
+										FRA = { has_war_with = GER }
+									}
+									AND = {
+										16 = { is_controlled_by = ITA }
+										16 = { is_owned_by = FRA }
+										ITA = { has_war_with = FRA }
+									}
+									AND = {
+										16 = { is_controlled_by = SOV }
+										16 = { is_owned_by = FRA }
+										SOV = { has_war_with = FRA }
+									}
+									AND = {
+										16 = { is_controlled_by = GER }
+										16 = { is_owned_by = FRA }
+										FRA = { has_war_with = GER }
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 16
 								NOT = {
 									controls_state = 16
@@ -1640,7 +1719,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 16
 								NOT = {
 									owns_state = 16
@@ -1658,12 +1736,17 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = fall_of_france
+								}
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_paris
 								OR = {
-									NOT = {
-										has_global_flag = fall_of_france
-									}
 									has_global_flag = liberation_of_paris
 									has_global_flag = liberation_of_paris_sov
 								}
@@ -1703,36 +1786,37 @@ on_actions = {
 						FROM.FROM = {
 							state = 126
 						}
-						NOT = {
-							OR = {
-								AND = {
-									126 = { is_controlled_by = GER }
-									126 = { is_owned_by = ENG }
-									GER = { has_war_with = ENG }
-								}
-								AND = {
-									126 = { is_controlled_by = ITA }
-									126 = { is_owned_by = ENG }
-									ITA = { has_war_with = ENG }
-								}
-								AND = {
-									126 = { is_controlled_by = SOV }
-									126 = { is_owned_by = ENG }
-									SOV = { has_war_with = ENG }
-								}
-							}
-						}
 					}
 					if = { #Captured
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_london
-									has_global_flag = bettercitynews_liberation_of_london
+									OR = {
+										has_global_flag = bettercitynews_fall_of_london
+										has_global_flag = bettercitynews_liberation_of_london
+									}
+								}
+							}
+							NOT = {
+								OR = {
+									AND = {
+										126 = { is_controlled_by = GER }
+										126 = { is_owned_by = ENG }
+										GER = { has_war_with = ENG }
+									}
+									AND = {
+										126 = { is_controlled_by = ITA }
+										126 = { is_owned_by = ENG }
+										ITA = { has_war_with = ENG }
+									}
+									AND = {
+										126 = { is_controlled_by = SOV }
+										126 = { is_owned_by = ENG }
+										SOV = { has_war_with = ENG }
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 126
 								NOT = {
 									controls_state = 126
@@ -1740,7 +1824,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 126
 								NOT = {
 									owns_state = 126
@@ -1758,12 +1841,17 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = fall_of_london_ger
+								}
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_london
 								OR = {
-									NOT = {
-										has_global_flag = fall_of_london_ger
-									}
 									has_global_flag = liberation_of_london
 									has_global_flag = liberation_of_london_sov
 								}
@@ -1803,46 +1891,47 @@ on_actions = {
 						FROM.FROM = {
 							state = 64
 						}
-						NOT = {
-							OR = {
-								AND = {
-									64 = { is_controlled_by = USA }
-									64 = { is_owned_by = GER }
-									USA = { has_war_with = GER }
-								}
-								AND = {
-									64 = { is_controlled_by = ENG }
-									64 = { is_owned_by = GER }
-									ENG = { has_war_with = GER }
-								}
-								AND = {
-									64 = { is_controlled_by = FRA }
-									64 = { is_owned_by = GER }
-									FRA = { has_war_with = GER }
-								}
-								AND = {
-									64 = { is_controlled_by = POL }
-									64 = { is_owned_by = GER }
-									POL = { has_war_with = GER }
-								}
-								AND = {
-									64 = { is_controlled_by = SOV }
-									64 = { is_owned_by = GER }
-									GER = { has_war_with = SOV }
-								}
-							}
-						}
 					}
 					if = { #Captured
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_berlin
-									has_global_flag = bettercitynews_liberation_of_berlin
+									OR = {
+										has_global_flag = bettercitynews_fall_of_berlin
+										has_global_flag = bettercitynews_liberation_of_berlin
+									}
+								}
+							}
+							NOT = {
+								OR = {
+									AND = {
+										64 = { is_controlled_by = USA }
+										64 = { is_owned_by = GER }
+										USA = { has_war_with = GER }
+									}
+									AND = {
+										64 = { is_controlled_by = ENG }
+										64 = { is_owned_by = GER }
+										ENG = { has_war_with = GER }
+									}
+									AND = {
+										64 = { is_controlled_by = FRA }
+										64 = { is_owned_by = GER }
+										FRA = { has_war_with = GER }
+									}
+									AND = {
+										64 = { is_controlled_by = POL }
+										64 = { is_owned_by = GER }
+										POL = { has_war_with = GER }
+									}
+									AND = {
+										64 = { is_controlled_by = SOV }
+										64 = { is_owned_by = GER }
+										GER = { has_war_with = SOV }
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 64
 								NOT = {
 									controls_state = 64
@@ -1850,7 +1939,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 64
 								NOT = {
 									owns_state = 64
@@ -1868,6 +1956,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_berlin
 							}
@@ -1911,12 +2002,13 @@ on_actions = {
 						limit = {
 							NOT = {
 								any_country = {
-									has_global_flag = bettercitynews_fall_of_istanbul
-									has_global_flag = bettercitynews_liberation_of_istanbul
+									OR = {
+										has_global_flag = bettercitynews_fall_of_istanbul
+										has_global_flag = bettercitynews_liberation_of_istanbul
+									}
 								}
 							}
 							FROM = {
-								has_war_with = ROOT
 								owns_state = 797
 								NOT = {
 									controls_state = 797
@@ -1924,7 +2016,6 @@ on_actions = {
 								}
 							}
 							ROOT = {
-								has_war_with = FROM
 								controls_state = 797
 								NOT = {
 									owns_state = 797
@@ -1942,6 +2033,9 @@ on_actions = {
 					}
 					else_if = { #Liberated
 						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
 							any_country = {
 								has_global_flag = bettercitynews_fall_of_istanbul
 							}
@@ -1975,6 +2069,360 @@ on_actions = {
 					}
 				}
 
+				else_if = { #Rome
+					limit = {
+						FROM.FROM = {
+							state = 2
+						}
+					}
+					if = { #Captured
+						limit = {
+							NOT = {
+								any_country = {
+									OR = {
+										has_global_flag = bettercitynews_fall_of_rome
+										has_global_flag = bettercitynews_liberation_of_rome
+									}
+								}
+							}
+							NOT = {
+								OR = {
+									AND = {
+										OR = {
+											2 = { is_controlled_by = ENG }
+											2 = { is_controlled_by = USA }
+											2 = { is_controlled_by = AST }
+											2 = { is_controlled_by = CAN }
+											2 = { is_controlled_by = NZL }
+											2 = { is_controlled_by = SAF }
+										}
+										OR = {
+											2 = { is_owned_by = ITA }
+											2 = { is_owned_by = GER }
+										}
+									}
+									AND = {
+										2 = { is_controlled_by = FRA }
+										2 = { is_owned_by = ITA }
+										FRA = { has_war_with = ITA }
+									}
+									AND = {
+										2 = { is_controlled_by = SOV }
+										2 = { is_owned_by = ITA }
+										SOV = { has_war_with = ITA }
+									}
+								}
+							}
+							FROM = {
+								owns_state = 2
+								NOT = {
+									controls_state = 2
+									has_capitulated = yes
+								}
+							}
+							ROOT = {
+								controls_state = 2
+								NOT = {
+									owns_state = 2
+								}
+							}
+						}
+						FROM = {
+							save_global_event_target_as = bettercitynews_fall_of_rome_owner
+							set_global_flag = bettercitynews_fall_of_rome
+						}
+						ROOT = {
+							save_global_event_target_as = bettercitynews_fall_of_rome_controller
+							news_event = { id = bettercitynews.68 hours = 5 }
+						}
+					}
+					else_if = { #Liberated
+						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_rome
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_liberation_of_rome
+								}
+							}
+							FROM = {
+								tag = event_target:bettercitynews_fall_of_rome_controller
+								NOT = {
+									controls_state = 2
+									owns_state = 2
+									tag = event_target:bettercitynews_fall_of_rome_owner
+								}
+							}
+							ROOT = {
+								tag = event_target:bettercitynews_fall_of_rome_owner
+								controls_state = 2
+								owns_state = 2
+								NOT = {
+									tag = event_target:bettercitynews_fall_of_rome_controller
+								}
+							}
+						}
+						ROOT = {
+							clr_global_flag = bettercitynews_fall_of_rome
+							set_global_flag = bettercitynews_liberation_of_rome
+							news_event = { id = bettercitynews.69 hours = 5 }
+						}
+					}
+				}
+
+				else_if = { #Madrid
+					limit = {
+						FROM.FROM = {
+							state = 41
+						}
+					}
+					if = { #Captured
+						limit = {
+							NOT = {
+								any_country = {
+									OR = {
+										has_global_flag = bettercitynews_fall_of_madrid
+										has_global_flag = bettercitynews_liberation_of_madrid
+									}
+								}
+							}
+							FROM = {
+								owns_state = 41
+								NOT = {
+									controls_state = 41
+									has_capitulated = yes
+								}
+							}
+							ROOT = {
+								controls_state = 41
+								NOT = {
+									owns_state = 41
+								}
+							}
+						}
+						FROM = {
+							save_global_event_target_as = bettercitynews_fall_of_madrid_owner
+							set_global_flag = bettercitynews_fall_of_madrid
+						}
+						ROOT = {
+							save_global_event_target_as = bettercitynews_fall_of_madrid_controller
+							news_event = { id = bettercitynews.92 hours = 5 }
+						}
+					}
+					else_if = { #Liberated
+						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_madrid
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_liberation_of_madrid
+								}
+							}
+							FROM = {
+								tag = event_target:bettercitynews_fall_of_madrid_controller
+								NOT = {
+									controls_state = 41
+									owns_state = 41
+									tag = event_target:bettercitynews_fall_of_madrid_owner
+								}
+							}
+							ROOT = {
+								tag = event_target:bettercitynews_fall_of_madrid_owner
+								controls_state = 41
+								owns_state = 41
+								NOT = {
+									tag = event_target:bettercitynews_fall_of_madrid_controller
+								}
+							}
+						}
+						ROOT = {
+							clr_global_flag = bettercitynews_fall_of_madrid
+							set_global_flag = bettercitynews_liberation_of_madrid
+							news_event = { id = bettercitynews.93 hours = 5 }
+						}
+					}
+				}
+
+				else_if = { #Warsaw
+					limit = {
+						FROM.FROM = {
+							state = 10
+						}
+					}
+					if = { #Captured
+						limit = {
+							NOT = {
+								OR = {
+									AND = {
+										10 = { is_controlled_by = GER }
+										10 = { is_owned_by = POL }
+										GER = { has_war_with = POL }
+									}
+									AND = {
+										10 = { is_controlled_by = SOV }
+										10 = { is_owned_by = POL }
+										SOV = { has_war_with = POL }
+									}
+									any_country = {
+										OR = {
+											has_global_flag = bettercitynews_fall_of_warsaw
+											has_global_flag = bettercitynews_liberation_of_warsaw
+										}
+									}
+								}
+							}
+							FROM = {
+								owns_state = 10
+								NOT = {
+									controls_state = 10
+									has_capitulated = yes
+								}
+							}
+							ROOT = {
+								controls_state = 10
+								NOT = {
+									owns_state = 10
+								}
+							}
+						}
+						FROM = {
+							save_global_event_target_as = bettercitynews_fall_of_warsaw_owner
+							set_global_flag = bettercitynews_fall_of_warsaw
+						}
+						ROOT = {
+							save_global_event_target_as = bettercitynews_fall_of_warsaw_controller
+							news_event = { id = bettercitynews.94 hours = 5 }
+						}
+					}
+					else_if = { #Liberated
+						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
+							OR = {
+								has_global_flag = liberation_of_warsaw
+								NOT = {
+									has_global_flag = fall_of_warsaw_ger
+								}
+							}
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_warsaw
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_liberation_of_warsaw
+								}
+							}
+							FROM = {
+								tag = event_target:bettercitynews_fall_of_warsaw_controller
+								NOT = {
+									controls_state = 10
+									owns_state = 10
+									tag = event_target:bettercitynews_fall_of_warsaw_owner
+								}
+							}
+							ROOT = {
+								tag = event_target:bettercitynews_fall_of_warsaw_owner
+								controls_state = 10
+								owns_state = 10
+								NOT = {
+									tag = event_target:bettercitynews_fall_of_warsaw_controller
+								}
+							}
+						}
+						ROOT = {
+							clr_global_flag = bettercitynews_fall_of_warsaw
+							set_global_flag = bettercitynews_liberation_of_warsaw
+							news_event = { id = bettercitynews.95 hours = 5 }
+						}
+					}
+				}
+
+				else_if = { #Reykjavik
+					limit = {
+						FROM.FROM = {
+							state = 100
+						}
+					}
+					if = { #Captured
+						limit = {
+							NOT = {
+								any_country = {
+									OR = {
+										has_global_flag = bettercitynews_fall_of_reykjavik
+										has_global_flag = bettercitynews_liberation_of_reykjavik
+									}
+								}
+							}
+							FROM = {
+								owns_state = 100
+								NOT = {
+									controls_state = 100
+									has_capitulated = yes
+								}
+							}
+							ROOT = {
+								controls_state = 100
+								NOT = {
+									owns_state = 100
+								}
+							}
+						}
+						FROM = {
+							save_global_event_target_as = bettercitynews_fall_of_reykjavik_owner
+							set_global_flag = bettercitynews_fall_of_reykjavik
+						}
+						ROOT = {
+							save_global_event_target_as = bettercitynews_fall_of_reykjavik_controller
+							news_event = { id = bettercitynews.96 hours = 5 }
+						}
+					}
+					else_if = { #Liberated
+						limit = {
+							NOT = {
+								has_global_flag = bettercityevents_liberation_disabled
+							}
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_reykjavik
+							}
+							NOT = {
+								any_country = {
+									has_global_flag = bettercitynews_liberation_of_reykjavik
+								}
+							}
+							FROM = {
+								tag = event_target:bettercitynews_fall_of_reykjavik_controller
+								NOT = {
+									controls_state = 100
+									owns_state = 100
+									tag = event_target:bettercitynews_fall_of_reykjavik_owner
+								}
+							}
+							ROOT = {
+								tag = event_target:bettercitynews_fall_of_reykjavik_owner
+								controls_state = 100
+								owns_state = 100
+								NOT = {
+									tag = event_target:bettercitynews_fall_of_reykjavik_controller
+								}
+							}
+						}
+						ROOT = {
+							clr_global_flag = bettercitynews_fall_of_reykjavik
+							set_global_flag = bettercitynews_liberation_of_reykjavik
+							news_event = { id = bettercitynews.97 hours = 5 }
+						}
+					}
+				}
+
 			}
 		}
 	}
@@ -1986,6 +2434,9 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
+					NOT = {
+						has_global_flag = bettercityevents_capitals_disabled
+					}
 					FROM.FROM = { #Add all the states concerned by events here (NON-CAPITALS)
 						OR = {
 							state = 151 #Zürich
@@ -2003,11 +2454,35 @@ on_actions = {
 							state = 685 #Panama Canal
 							state = 501 #Sao Paulo
 							state = 101 #Greendland
+							state = 49 #Ankara
+							state = 339 #Izmir
+							state = 119 #Belfast
+							state = 121 #Edinburgh
+							state = 122 #Cardiff
+							state = 14 #Brest
+							state = 19 #Bordeaux
+							state = 21 #Marseille
+							state = 29 #Calais
+							state = 785 #Amiens
+							state = 165 #Barcelona
+							state = 169 #Sevilla
+							state = 118 #Gibraltar
+							state = 52 #Munich
+							state = 50 #Stuttgart
+							state = 55 #Frankfurt
+							state = 58 #Hamburg
+							state = 763 #Königsberg
+							state = 160 #Venice
+							state = 159 #Milan
+							state = 117 #Naples
+							state = 115 #Palermo
+							state = 88 #Krakow
+							state = 85 #Danzig
 						}
 					}
 					FROM = {
 						NOT = {
-							has_civil_war = yes
+							original_tag = ROOT
 						}
 					}
 				}
@@ -2325,9 +2800,11 @@ on_actions = {
 							}
 						}
 						NOT = {
-							378 = { is_controlled_by = JAP }
-							378 = { is_owned_by = USA }
-							JAP = { has_war_with = USA }
+							AND = {
+								378 = { is_controlled_by = JAP }
+								378 = { is_owned_by = USA }
+								JAP = { has_war_with = USA }
+							}
 						}
 					}
 					FROM = {
@@ -2366,9 +2843,11 @@ on_actions = {
 							}
 						}
 						NOT = { #Do not trigger if base game event triggers
-							358 = { is_controlled_by = GER }
-							358 = { is_owned_by = USA }
-							GER = { has_war_with = USA }
+							AND = {
+								358 = { is_controlled_by = GER }
+								358 = { is_owned_by = USA }
+								GER = { has_war_with = USA }
+							}
 						}
 					}
 					FROM = {
@@ -2479,9 +2958,11 @@ on_actions = {
 							}
 						}
 						NOT = {
-							685 = { is_controlled_by = JAP }
-							685 = { is_owned_by = USA }
-							JAP = { has_war_with = USA }
+							AND = {
+								685 = { is_controlled_by = JAP }
+								685 = { is_owned_by = USA }
+								JAP = { has_war_with = USA }
+							}
 						}
 					}
 					FROM = {
@@ -2563,6 +3044,898 @@ on_actions = {
 					ROOT = {
 						save_global_event_target_as = bettercitynews_fall_of_greendland_controller
 						news_event = { id = bettercitynews.57 hours = 5 }
+					}
+				}
+
+				else_if = { #Ankara
+					limit = {
+						FROM.FROM = {
+							state = 49
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_ankara
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 49
+							NOT = {
+								controls_state = 49
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 49
+							NOT = {
+								owns_state = 49
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_ankara_owner
+						set_global_flag = bettercitynews_fall_of_ankara
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_ankara_controller
+						news_event = { id = bettercitynews.66 hours = 5 }
+					}
+				}
+
+				else_if = { #Izmir
+					limit = {
+						FROM.FROM = {
+							state = 339
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_izmir
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 339
+							NOT = {
+								controls_state = 339
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 339
+							NOT = {
+								owns_state = 339
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_izmir_owner
+						set_global_flag = bettercitynews_fall_of_izmir
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_izmir_controller
+						news_event = { id = bettercitynews.67 hours = 5 }
+					}
+				}
+
+				else_if = { #Belfast
+					limit = {
+						FROM.FROM = {
+							state = 119
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_belfast
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 119
+							NOT = {
+								controls_state = 119
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 119
+							NOT = {
+								owns_state = 119
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_belfast_owner
+						set_global_flag = bettercitynews_fall_of_belfast
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_belfast_controller
+						news_event = { id = bettercitynews.70 hours = 5 }
+					}
+				}
+
+				else_if = { #Edinburgh
+					limit = {
+						FROM.FROM = {
+							state = 121
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_edinburgh
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 121
+							NOT = {
+								controls_state = 121
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 121
+							NOT = {
+								owns_state = 121
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_edinburgh_owner
+						set_global_flag = bettercitynews_fall_of_edinburgh
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_edinburgh_controller
+						news_event = { id = bettercitynews.71 hours = 5 }
+					}
+				}
+
+				else_if = { #Cardiff
+					limit = {
+						FROM.FROM = {
+							state = 122
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_cardiff
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 122
+							NOT = {
+								controls_state = 122
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 122
+							NOT = {
+								owns_state = 122
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_cardiff_owner
+						set_global_flag = bettercitynews_fall_of_cardiff
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_cardiff_controller
+						news_event = { id = bettercitynews.72 hours = 5 }
+					}
+				}
+
+				else_if = { #Brest
+					limit = {
+						FROM.FROM = {
+							state = 14
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_brest
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 14
+							NOT = {
+								controls_state = 14
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 14
+							NOT = {
+								owns_state = 14
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_brest_owner
+						set_global_flag = bettercitynews_fall_of_brest
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_brest_controller
+						news_event = { id = bettercitynews.73 hours = 5 }
+					}
+				}
+
+				else_if = { #Bordeaux
+					limit = {
+						FROM.FROM = {
+							state = 19
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_bordeaux
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 19
+							NOT = {
+								controls_state = 19
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 19
+							NOT = {
+								owns_state = 19
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_bordeaux_owner
+						set_global_flag = bettercitynews_fall_of_bordeaux
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_bordeaux_controller
+						news_event = { id = bettercitynews.74 hours = 5 }
+					}
+				}
+
+				else_if = { #Marseille
+					limit = {
+						FROM.FROM = {
+							state = 21
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_marseille
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 21
+							NOT = {
+								controls_state = 21
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 21
+							NOT = {
+								owns_state = 21
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_marseille_owner
+						set_global_flag = bettercitynews_fall_of_marseille
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_marseille_controller
+						news_event = { id = bettercitynews.75 hours = 5 }
+					}
+				}
+
+				else_if = { #Calais
+					limit = {
+						FROM.FROM = {
+							state = 29
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_calais
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 29
+							NOT = {
+								controls_state = 29
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 29
+							NOT = {
+								owns_state = 29
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_calais_owner
+						set_global_flag = bettercitynews_fall_of_calais
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_calais_controller
+						news_event = { id = bettercitynews.76 hours = 5 }
+					}
+				}
+
+				else_if = { #Amiens
+					limit = {
+						FROM.FROM = {
+							state = 785
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_amiens
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 785
+							NOT = {
+								controls_state = 785
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 785
+							NOT = {
+								owns_state = 785
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_amiens_owner
+						set_global_flag = bettercitynews_fall_of_amiens
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_amiens_controller
+						news_event = { id = bettercitynews.77 hours = 5 }
+					}
+				}
+
+				else_if = { #Barcelona
+					limit = {
+						FROM.FROM = {
+							state = 165
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_barcelona
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 165
+							NOT = {
+								controls_state = 165
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 165
+							NOT = {
+								owns_state = 165
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_barcelona_owner
+						set_global_flag = bettercitynews_fall_of_barcelona
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_barcelona_controller
+						news_event = { id = bettercitynews.78 hours = 5 }
+					}
+				}
+
+				else_if = { #Sevilla
+					limit = {
+						FROM.FROM = {
+							state = 169
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_sevilla
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 169
+							NOT = {
+								controls_state = 169
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 169
+							NOT = {
+								owns_state = 169
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_sevilla_owner
+						set_global_flag = bettercitynews_fall_of_sevilla
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_sevilla_controller
+						news_event = { id = bettercitynews.79 hours = 5 }
+					}
+				}
+
+				else_if = { #Gibraltar
+					limit = {
+						FROM.FROM = {
+							state = 118
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_gibraltar
+							}
+						}
+						NOT = {
+							OR = {
+								AND = {
+									118 = { is_controlled_by = GER }
+									118 = { is_owned_by = ENG }
+									GER = { has_war_with = ENG }
+								}
+								AND = {
+									118 = { is_controlled_by = ITA }
+									118 = { is_owned_by = ENG }
+									ITA = { has_war_with = ENG }
+								}
+								AND = {
+									any_other_country = {
+										original_tag = SPR
+										controls_state = 118
+										has_war_with = ENG
+									}
+									118 = { is_owned_by = ENG }
+									NOT = {
+										AND = {
+											has_global_flag = spanish_civil_war
+											NOT = { has_global_flag = scw_over }
+										}
+									}
+								}
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 118
+							NOT = {
+								controls_state = 118
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 118
+							NOT = {
+								owns_state = 118
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_gibraltar_owner
+						set_global_flag = bettercitynews_fall_of_gibraltar
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_gibraltar_controller
+						news_event = { id = bettercitynews.80 hours = 5 }
+					}
+				}
+
+				else_if = { #Munich
+					limit = {
+						FROM.FROM = {
+							state = 52
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_munich
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 52
+							NOT = {
+								controls_state = 52
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 52
+							NOT = {
+								owns_state = 52
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_munich_owner
+						set_global_flag = bettercitynews_fall_of_munich
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_munich_controller
+						news_event = { id = bettercitynews.81 hours = 5 }
+					}
+				}
+
+				else_if = { #Stuttgart
+					limit = {
+						FROM.FROM = {
+							state = 50
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_stuttgart
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 50
+							NOT = {
+								controls_state = 50
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 50
+							NOT = {
+								owns_state = 50
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_stuttgart_owner
+						set_global_flag = bettercitynews_fall_of_stuttgart
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_stuttgart_controller
+						news_event = { id = bettercitynews.82 hours = 5 }
+					}
+				}
+
+				else_if = { #Frankfurt
+					limit = {
+						FROM.FROM = {
+							state = 55
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_frankfurt
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 55
+							NOT = {
+								controls_state = 55
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 55
+							NOT = {
+								owns_state = 55
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_frankfurt_owner
+						set_global_flag = bettercitynews_fall_of_frankfurt
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_frankfurt_controller
+						news_event = { id = bettercitynews.83 hours = 5 }
+					}
+				}
+
+				else_if = { #Hamburg
+					limit = {
+						FROM.FROM = {
+							state = 58
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_hamburg
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 58
+							NOT = {
+								controls_state = 58
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 58
+							NOT = {
+								owns_state = 58
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_hamburg_owner
+						set_global_flag = bettercitynews_fall_of_hamburg
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_hamburg_controller
+						news_event = { id = bettercitynews.84 hours = 5 }
+					}
+				}
+
+				else_if = { #Königsberg
+					limit = {
+						FROM.FROM = {
+							state = 763
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_königsberg
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 763
+							NOT = {
+								controls_state = 763
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 763
+							NOT = {
+								owns_state = 763
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_königsberg_owner
+						set_global_flag = bettercitynews_fall_of_königsberg
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_königsberg_controller
+						news_event = { id = bettercitynews.85 hours = 5 }
+					}
+				}
+
+				else_if = { #Venice
+					limit = {
+						FROM.FROM = {
+							state = 160
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_venice
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 160
+							NOT = {
+								controls_state = 160
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 160
+							NOT = {
+								owns_state = 160
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_venice_owner
+						set_global_flag = bettercitynews_fall_of_venice
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_venice_controller
+						news_event = { id = bettercitynews.86 hours = 5 }
+					}
+				}
+
+				else_if = { #Milan
+					limit = {
+						FROM.FROM = {
+							state = 159
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_milan
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 159
+							NOT = {
+								controls_state = 159
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 159
+							NOT = {
+								owns_state = 159
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_milan_owner
+						set_global_flag = bettercitynews_fall_of_milan
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_milan_controller
+						news_event = { id = bettercitynews.87 hours = 5 }
+					}
+				}
+
+				else_if = { #Naples
+					limit = {
+						FROM.FROM = {
+							state = 117
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_naples
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 117
+							NOT = {
+								controls_state = 117
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 117
+							NOT = {
+								owns_state = 117
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_naples_owner
+						set_global_flag = bettercitynews_fall_of_naples
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_naples_controller
+						news_event = { id = bettercitynews.88 hours = 5 }
+					}
+				}
+
+				else_if = { #Palermo
+					limit = {
+						FROM.FROM = {
+							state = 115
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_palermo
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 115
+							NOT = {
+								controls_state = 115
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 115
+							NOT = {
+								owns_state = 115
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_palermo_owner
+						set_global_flag = bettercitynews_fall_of_palermo
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_palermo_controller
+						news_event = { id = bettercitynews.89 hours = 5 }
+					}
+				}
+
+				else_if = { #Krakow
+					limit = {
+						FROM.FROM = {
+							state = 88
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_krakow
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 88
+							NOT = {
+								controls_state = 88
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 88
+							NOT = {
+								owns_state = 88
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_krakow_owner
+						set_global_flag = bettercitynews_fall_of_krakow
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_krakow_controller
+						news_event = { id = bettercitynews.90 hours = 5 }
+					}
+				}
+
+				else_if = { #Danzig
+					limit = {
+						FROM.FROM = {
+							state = 85
+						}
+						NOT = {
+							any_country = {
+								has_global_flag = bettercitynews_fall_of_danzig
+							}
+						}
+						FROM = {
+							has_war_with = ROOT
+							owns_state = 85
+							NOT = {
+								controls_state = 85
+								has_capitulated = yes
+							}
+						}
+						ROOT = {
+							has_war_with = FROM
+							controls_state = 85
+							NOT = {
+								owns_state = 85
+							}
+						}
+					}
+					FROM = {
+						save_global_event_target_as = bettercitynews_fall_of_danzig_owner
+						set_global_flag = bettercitynews_fall_of_danzig
+					}
+					ROOT = {
+						save_global_event_target_as = bettercitynews_fall_of_danzig_controller
+						news_event = { id = bettercitynews.91 hours = 5 }
 					}
 				}
 
