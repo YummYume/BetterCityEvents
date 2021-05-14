@@ -7,4 +7,4 @@ tags={
 	"Map"
 }
 name="Better City Events"
-supported_version="1.10.3"
+supported_version="1.10.5"

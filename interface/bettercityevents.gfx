@@ -1,4 +1,14 @@
 spriteTypes = {
+
+	spriteType = {
+		name = "GFX_bettercityevents_fall_generic"
+		texturefile = "gfx/event_pictures/bettercityevents_fall_generic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_bettercityevents_liberation_generic"
+		texturefile = "gfx/event_pictures/bettercityevents_liberation_generic.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_bettercityevents_fall_chicago"
