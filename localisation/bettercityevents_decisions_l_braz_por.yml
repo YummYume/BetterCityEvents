@@ -1,0 +1,22 @@
+﻿l_braz_por:
+ #Decisions
+ bettercityevents_decisions:0 "Better City Events"
+ bettercityevents_decisions_desc:0 "Decision menu to enable and disable certain events. Only usable by players.\n\n\n§YNon-Capital Events§! are currently [GetNonCapitalEventStatus].\n§YLiberation Events§! are currently [GetLiberationEventStatus]."
+ bettercityevents_disable_non_capital_cities:0 "Disable Non-Capital Events"
+ bettercityevents_disable_non_capital_cities_desc:0 "Events for Non-Capital Cities will not show up."
+ bettercityevents_disable_non_capital_cities_tt:0 "§RDisables§! §YEvents§! for §YNon-Capital Cities§!."
+ bettercityevents_enable_non_capital_cities:0 "Enable Non-Capital Events"
+ bettercityevents_enable_non_capital_cities_desc:0 "Events for Non-Capital Cities will show up."
+ bettercityevents_enable_non_capital_cities_tt:0 "§GEnables§! §YEvents§! for §YNon-Capital Cities§!."
+ bettercityevents_disable_liberation_cities:0 "Disable Liberation Events"
+ bettercityevents_disable_liberation_cities_desc:0 "Events when Liberating Cities will not show up."
+ bettercityevents_disable_liberation_cities_tt:0 "§RDisables§! §YEvents§! for §YLiberated Cities§!."
+ bettercityevents_enable_liberation_cities:0 "Enable Liberation Events"
+ bettercityevents_enable_liberation_cities_desc:0 "Events when Liberating Cities will show up."
+ bettercityevents_enable_liberation_cities_tt:0 "§GEnables§! §YEvents§! for §YLiberated Cities§!."
+
+ #Scripted Localisation
+ BETTERCITYEVENTS_CAPITAL_CITIES_DISABLED_LOC:0 "§RDisabled§!"
+ BETTERCITYEVENTS_CAPITAL_CITIES_ENABLED_LOC:0 "§GEnabled§!"
+ BETTERCITYEVENTS_LIBERATION_CITIES_DISABLED_LOC:0 "§RDisabled§!"
+ BETTERCITYEVENTS_LIBERATION_CITIES_ENABLED_LOC:0 "§GEnabled§!"
