@@ -20,4 +20,33 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/bettercityevents_fall_dublin.dds"
 	}
 
+	spriteType = {
+		name = "GFX_bettercityevents_fall_berlin"
+		texturefile = "gfx/event_pictures/bettercityevents_fall_berlin.dds"
+	}
+
+	spriteType = {
+		name = "GFX_bettercityevents_fall_london"
+		texturefile = "gfx/event_pictures/bettercityevents_fall_london.dds"
+	}
+
+	spriteType = {
+		name = "GFX_bettercityevents_fall_moscow"
+		texturefile = "gfx/event_pictures/bettercityevents_fall_moscow.dds"
+	}
+
+	spriteType = {
+		name = "GFX_bettercityevents_fall_paris"
+		texturefile = "gfx/event_pictures/bettercityevents_fall_paris.dds"
+	}
+
+	spriteType = {
+		name = "GFX_bettercityevents_fall_rome"
+		texturefile = "gfx/event_pictures/bettercityevents_fall_rome.dds"
+	}
+
+	spriteType = {
+		name = "GFX_bettercityevents_fall_tokyo"
+		texturefile = "gfx/event_pictures/bettercityevents_fall_tokyo.dds"
+	}
 }

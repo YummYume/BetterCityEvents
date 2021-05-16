@@ -2372,7 +2372,7 @@ news_event = {
 	id = bettercitynews.58
 	title = bettercitynews.58.t
 	desc = bettercitynews.58.d
-	picture = GFX_bettercityevents_fall_generic
+	picture = GFX_bettercityevents_fall_paris
 	
 	major = yes
 	
@@ -2452,7 +2452,7 @@ news_event = {
 	id = bettercitynews.60
 	title = bettercitynews.60.t
 	desc = bettercitynews.60.d
-	picture = GFX_bettercityevents_fall_generic
+	picture = GFX_bettercityevents_fall_london
 	
 	major = yes
 	
@@ -2532,7 +2532,7 @@ news_event = {
 	id = bettercitynews.62
 	title = bettercitynews.62.t
 	desc = bettercitynews.62.d
-	picture = GFX_bettercityevents_fall_generic
+	picture = GFX_bettercityevents_fall_berlin
 	
 	major = yes
 	
@@ -2781,7 +2781,7 @@ news_event = {
 	id = bettercitynews.68
 	title = bettercitynews.68.t
 	desc = bettercitynews.68.d
-	picture = GFX_bettercityevents_fall_generic
+	picture = GFX_bettercityevents_fall_rome
 	
 	major = yes
 	
@@ -5581,7 +5581,7 @@ news_event = {
 	id = bettercitynews.138
 	title = bettercitynews.138.t
 	desc = bettercitynews.138.d
-	picture = GFX_bettercityevents_fall_generic
+	picture = GFX_bettercityevents_fall_moscow
 	
 	major = yes
 	
@@ -7501,7 +7501,7 @@ news_event = {
 	id = bettercitynews.186
 	title = bettercitynews.186.t
 	desc = bettercitynews.186.d
-	picture = GFX_bettercityevents_fall_generic
+	picture = GFX_bettercityevents_fall_tokyo
 	
 	major = yes
 	

@@ -369,7 +369,7 @@ on_actions = {
 						}
 						ROOT = {
 							save_global_event_target_as = bettercitynews_fall_of_luxemburg_controller
-							news_event = { id = bettercitynews.7 hours = 5 }
+							news_event = { id = bettercitynews.8 hours = 5 }
 						}
 					}
 					else_if = { #Liberated
@@ -405,7 +405,7 @@ on_actions = {
 						ROOT = {
 							clr_global_flag = bettercitynews_fall_of_luxemburg
 							set_global_flag = bettercitynews_liberation_of_luxemburg
-							news_event = { id = bettercitynews.8 hours = 5 }
+							news_event = { id = bettercitynews.9 hours = 5 }
 						}
 					}
 				}
