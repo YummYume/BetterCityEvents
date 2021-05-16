@@ -9,6 +9,7 @@ If you want to contribute, here is how it works :
 - Code issues are about which cities are in the mod currently (if a city is in there and not checked, that means it is not currently available in the mod)
 - GFX issues are about event pictures. When a country has at least one custom picture, the line is checked but that does not mean all cities on the line have a custom picture
 - Localisation issues are about event descriptions. When a country has at least one custom description, the line is checked but that does not mean all cities on the line have a custom description
+- **Bold** means the city has a liberation event. _Italic_ means the city has its line checked but still needs work (GFX or localisation).
 
 Every event has a base picture (capture & liberation) and a basic description(capture & liberation). If you want to contribute to any event, feel free to add an issue, DM me on Discord/Steam (prefer Discord) or simply in the Discord. You will be credited in the mod's description (if you wish to be).
 You can : send a picture to add on an event (with base picture), a description you made yourself or even suggest a city to add in the mod.
