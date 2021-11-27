@@ -1,5 +1,24 @@
-#CAPITAL CITIES
 on_actions = {
+	on_startup = {
+		effect = {
+			set_global_flag = better_city_events_enabled
+		}
+	}
+
+	on_weekly_SWI = { #We neutral here ;)
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = better_city_events_enabled
+					}
+				}
+				set_global_flag = better_city_events_enabled
+			}
+		}
+	}
+
+	#CAPITAL CITIES
 	on_state_control_changed = {
 		effect = {
 			if = {
